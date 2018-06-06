@@ -1,0 +1,154 @@
+/////////////////////////////////////////////////////
+STM32 GPIO 配置流程
+1.开启GPIO 时钟（在STM32 中，所有的外设固件，都需要开启相应的时钟）；
+2.选择需要配置的引脚；
+3.选择引脚工作速度；
+4.配置GPIO 模式（八种模式之一）；
+5.初始化GPIO口
+
+
+/////////////////////////////////////////////////////
+头文件书写格式（防止重包含，具体写法参考LED.h）
+#ifndef __LED_H_
+#define __LED_H_
+
+/*包含相关的头文件*/
+#include "stm32f10x.h"
+#include "stm32f10x_gpio.h"
+#include "stm32f10x_rcc.h"
+
+#endif
+
+
+/////////////////////////////////////////////////////
+若LED接VCC，则LED为负逻辑；//LED = 0; 亮
+若KEY接GND，则KEY为负逻辑；//KEY = 0；按下
+
+////////////////////////////////////////////////////
+控制LED  推挽输出
+通信     推挽输出   浮空输入
+key      上拉 下拉输入/浮空输入
+见STM32中GPIO的8种工作模式
+
+////////////////////////////////////////////////////
+瞎写的东西 
+呼吸灯
+void LED0_Breath(void)
+{
+	u16 i,j;
+	for(i=1;i<1000;i++)
+	{
+		for(j=1;j<=2;j++)
+		{
+			LED0=0;
+			delay_us(i);
+			LED0=1;
+			delay_us(1000-i);	
+		}				
+	}
+	
+	for(i=1;i<1000;i++)
+	{
+		for(j=1;j<=2;j++)
+		{
+			LED0=0;
+			delay_us(1000-i);
+			LED0=1;
+			delay_us(i);	
+		}				
+	}
+}
+
+///////////////////////////////////////关于char*
+#include<stdio.h>
+int main(){
+    char* str = "learn c";
+    printf("%s\n", str);
+    getchar();
+    return 0;
+}
+/*运行结果是
+learn c
+*/
+
+///////////////////////////////////////
+\\ 反斜杠
+　　\a 警告
+　　\b 退格
+　　\f 换页
+　　\n 换行
+　　\r 回车
+　　\t 跳格
+　　\v 垂直跳格
+    \r\n回车换行
+	
+//////////////////////////////////////
+声明外部变量
+例：
+extern u32 result_UT;
+extern u32 result_UP;
+
+/////////////////////////////////////
+GPIO模式
+typedef enum
+{ 
+GPIO_Mode_AIN = 0x0,	//模拟输入
+GPIO_Mode_IN_FLOATING = 0x04, //浮空输入
+GPIO_Mode_IPD = 0x28,	//下拉输入
+GPIO_Mode_IPU = 0x48,	//上拉输入
+GPIO_Mode_Out_OD = 0x14,	//开漏输出
+GPIO_Mode_Out_PP = 0x10,	//通用推挽输出
+PIO_Mode_AF_OD = 0x1C,	//复用开漏输出
+GPIO_Mode_AF_PP = 0x18	//复用推挽
+}
+GPIOMode_TypeDef;
+
+GPIO操作方法
+例：
+GPIO_SetBits(GPIOA,GPIO_Pin_8);                    //PA8输出1
+GPIO_ResetBits(GPIOA,GPIO_Pin_8);                  //PA8输出0
+GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_5)   //读取PC5的电平 
+
+
+
+/////////////////////////////////////
+任何涉及中断的程序均需要在主函数中设置中断优先级分组为2
+NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+
+注：Cortex-M3允许具有较少中断源时使用较少的寄存器位指定中断源的优先级，
+因此STM32把指定中断优先级的寄存器位减少到4位，这4个寄存器位的分组方式如下：
+
+第0组：所有4位用于指定响应优先级
+
+第1组：最高1位用于指定抢占式优先级，最低3位用于指定响应优先级
+
+第2组：最高2位用于指定抢占式优先级，最低2位用于指定响应优先级
+
+第3组：最高3位用于指定抢占式优先级，最低1位用于指定响应优先级
+
+第4组：所有4位用于指定抢占式优先级
+
+
+/////////////////////////////////////
+字符串合并发送函数
+u32 tmp[400];
+
+void a_printf(u16 times,u8 len)
+{
+	int i,j;
+	char str[3000];
+	for(i=0;i<times;i++)
+	{
+		for(j=0;j<len;j++)
+		{	
+			str[i*(len+1)+len-1-j]=tmp[i]%10+'0';
+			tmp[i]=tmp[i]/10;
+		}
+		str[i*(len+1)-1]=',';
+		
+	}
+	str[(len+1)*i-1]=' '; 
+	str[(len+1)*i]='\0'; 
+	printf("%s",str);
+
+}
