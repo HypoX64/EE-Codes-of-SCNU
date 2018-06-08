@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="test">
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_v7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Mod5" CBX_FILE_NAME="lpm_divide_65m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_5so.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Div5" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_v7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_65m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Mod4" CBX_FILE_NAME="lpm_divide_65m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_5so.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Div4" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|test|lpm_divide:Mod3" CBX_FILE_NAME="lpm_divide_65m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

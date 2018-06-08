@@ -1,0 +1,53 @@
+@ECHO OFF
+
+ECHO CCWM.BAT:            Compiling GUI\WM
+
+CALL CC wm
+CALL CC WM__GetFirstSibling
+CALL CC WM__GetHasFocus
+CALL CC WM__GetLastSibling
+CALL CC WM__GetPrevSibling
+CALL CC WM__Screen2Client
+CALL CC WM__SendMessage
+CALL CC WM__SendMessageNoPara
+CALL CC WM_BringToBottom
+CALL CC WM_BringToTop
+CALL CC WM_Broadcast
+CALL CC WM_EnableWindow
+CALL CC WM_GetBkColor
+CALL CC WM_GetClientRect
+CALL CC WM_GetClientWindow
+CALL CC WM_GetDialogItem
+CALL CC WM_GetFocussedChild
+CALL CC WM_GetId
+CALL CC WM_GetInsideRect
+CALL CC WM_GetFirstChild
+CALL CC WM_GetNextSibling
+CALL CC WM_GetParent
+CALL CC WM_GetScrollState
+CALL CC WM_GetWindowRect
+CALL CC WM_GetWindowSize
+CALL CC WM_HasCaptured
+CALL CC WM_Hide
+CALL CC WM_IsWindow
+CALL CC WM_Move
+CALL CC WM_NotifyParent
+CALL CC WM_OnKey
+CALL CC WM_Paint
+CALL CC WM_ResizeWindow
+CALL CC WM_Screen2Win
+CALL CC WM_SendToParent
+CALL CC WM_SetDesktopColor
+CALL CC WM_SetCallback
+CALL CC WM_SetCapture
+CALL CC WM_SetCreateFlags
+CALL CC WM_SetFocus
+CALL CC WM_SetFocusOnNextChild
+CALL CC WM_SetScrollState
+CALL CC WM_SetSize
+CALL CC WM_SetTrans
+CALL CC WM_SetUserClipRect
+CALL CC WM_Validate
+CALL CC WM_ValidateWindow
+CALL CC WMMemDev
+CALL CC WMTouch

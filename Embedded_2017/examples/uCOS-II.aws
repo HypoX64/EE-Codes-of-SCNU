@@ -1,0 +1,29 @@
+# ADT Workspace File, Format Version 1.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+[AWS begin]
+    [WorkSpace begin]
+        Name=_string(uCOS-II)
+        FileType=_string(WorkSpace)
+        Version=_string(v1.0)
+        Opt File Name=_string(.\uCOS-II.opt)
+    [WorkSpace end]
+    [Project List begin]
+        Project1=_string(.\UCOS-II\Eg2.apj)
+        Project13=_string(.\UCOS-II\Terris\Terris.apj)
+        Project0=_string(.\UCOS-II\Eg1.apj)
+        Project12=_string(.\UCOS-II\Snake\Snake.apj)
+        Project11=_string(.\UCOS-II\App4\App4.apj)
+        Project10=_string(.\UCOS-II\App3\App3.apj)
+        Project9=_string(.\UCOS-II\App2\App2.apj)
+        Project8=_string(.\UCOS-II\App1\UC-GUI-APP1.apj)
+        Project7=_string(.\UCOS-II\UC-GUI\UC-GUI.apj)
+        Project6=_string(.\UCOS-II\Eg_stepper.apj)
+        Project5=_string(.\UCOS-II\Eg_timer.apj)
+        Project Numbers=_long(14)
+        Project4=_string(.\UCOS-II\Eg_kbd.apj)
+        Project3=_string(.\UCOS-II\Eg4.apj)
+        Project2=_string(.\UCOS-II\Eg3.apj)
+        Active Project=_string(APP1)
+    [Project List end]
+[AWS end]

@@ -1,0 +1,56 @@
+Added Component: Designator=C_G(LED_0805)
+Added Component: Designator=C_R(LED_0805)
+Added Component: Designator=C_Y(LED_0805)
+Added Component: Designator=P1(HDR5X2_A1)
+Added Component: Designator=P_G(LED_0805)
+Added Component: Designator=P_R(LED_0805)
+Added Component: Designator=R2(0805-2)
+Added Component: Designator=R3(0805-2)
+Added Component: Designator=R4(0805-2)
+Added Component: Designator=S1(SW_PB4_A1)
+Added Pin To Net: NetName=+3.3V Pin=P1-2
+Added Pin To Net: NetName=+3.3V Pin=R4-1
+Added Net: Name=+3.3V
+Added Pin To Net: NetName=24 Pin=P1-3
+Added Pin To Net: NetName=24 Pin=R3-1
+Added Net: Name=24
+Added Pin To Net: NetName=25 Pin=C_R-1
+Added Pin To Net: NetName=25 Pin=P1-4
+Added Net: Name=25
+Added Pin To Net: NetName=26 Pin=C_Y-1
+Added Pin To Net: NetName=26 Pin=P1-6
+Added Net: Name=26
+Added Pin To Net: NetName=27 Pin=P1-7
+Added Pin To Net: NetName=27 Pin=P_G-1
+Added Net: Name=27
+Added Pin To Net: NetName=28 Pin=C_G-1
+Added Pin To Net: NetName=28 Pin=P1-8
+Added Net: Name=28
+Added Pin To Net: NetName=30 Pin=P1-10
+Added Pin To Net: NetName=30 Pin=P_R-1
+Added Net: Name=30
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-5
+Added Pin To Net: NetName=GND Pin=P1-9
+Added Pin To Net: NetName=GND Pin=R2-2
+Added Pin To Net: NetName=GND Pin=S1-1
+Added Pin To Net: NetName=GND Pin=S1-4
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC_G_2 Pin=C_G-2
+Added Net: Name=NetC_G_2
+Added Pin To Net: NetName=NetC_R_2 Pin=C_R-2
+Added Net: Name=NetC_R_2
+Added Pin To Net: NetName=NetC_Y_2 Pin=C_Y-2
+Added Net: Name=NetC_Y_2
+Added Pin To Net: NetName=NetP_G_2 Pin=P_G-2
+Added Pin To Net: NetName=NetP_G_2 Pin=R2-1
+Added Net: Name=NetP_G_2
+Added Pin To Net: NetName=NetP_R_2 Pin=P_R-2
+Added Net: Name=NetP_R_2
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=R4-2
+Added Pin To Net: NetName=NetR3_2 Pin=S1-2
+Added Pin To Net: NetName=NetR3_2 Pin=S1-3
+Added Net: Name=NetR3_2
+Added Class: Name=Sheet1
+Added Room: Name=Sheet1

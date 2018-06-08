@@ -1,0 +1,133 @@
+; USBBLSTR.INF
+; Copyright (c) 2007-2008 Altera Corporation
+; USB Blaster driver installation for Windows 2000, XP, Server 2003, Vista (x86 and x64).
+;
+; Contents derived from FTDIBUS.INF
+; Copyright (c) 2000-2008 FTDI Ltd.
+;
+
+[Version]
+Signature="$Windows NT$"
+DriverPackageType=PlugAndPlay
+DriverPackageDisplayName=%DESC%
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+Provider=%Altera%
+CatalogFile=ftdibus.cat
+DriverVer=02/17/2009,2.04.16
+
+[SourceDisksNames]
+1=%DriversDisk%,,,
+
+[SourceDisksFiles]
+ftdibus.sys = 1,x32
+ftbusui.dll = 1,x32
+ftd2xx.dll = 1,x32
+FTLang.Dll = 1,x32
+
+[SourceDisksFiles.amd64]
+ftdibus.sys = 1,x64
+ftbusui.dll = 1,x64
+ftd2xx64.dll = 1,x64
+ftd2xx.dll = 1,x32
+FTLang.Dll = 1,x64
+
+[DestinationDirs]
+AlteraUSBBlaster.NT.Copy = 10,system32\drivers
+AlteraUSBBlaster.NT.Copy2 = 10,system32
+AlteraUSBBlaster.NTamd64.Copy = 10,system32\drivers
+AlteraUSBBlaster.NTamd64.Copy2 = 10,system32
+AlteraUSBBlaster.NTamd64.Copy3 = 10,syswow64
+
+[Manufacturer]
+%Altera%=AlteraHw,NTamd64
+
+[AlteraHw]
+%USB\VID_09FB&PID_6001.DeviceDesc%=AlteraUSBBlaster.NT,USB\VID_09FB&PID_6001
+%USB\VID_09FB&PID_6001.DeviceDesc%=AlteraUSBBlaster.NT,USB\VID_09FB&PID_6002
+%USB\VID_09FB&PID_6001.DeviceDesc%=AlteraUSBBlaster.NT,USB\VID_09FB&PID_6003
+
+[AlteraHw.NTamd64]
+%USB\VID_09FB&PID_6001.DeviceDesc%=AlteraUSBBlaster.NTamd64,USB\VID_09FB&PID_6001
+%USB\VID_09FB&PID_6001.DeviceDesc%=AlteraUSBBlaster.NTamd64,USB\VID_09FB&PID_6002
+%USB\VID_09FB&PID_6001.DeviceDesc%=AlteraUSBBlaster.NTamd64,USB\VID_09FB&PID_6003
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[AlteraUSBBlaster.NT]
+CopyFiles=AlteraUSBBlaster.NT.Copy,AlteraUSBBlaster.NT.Copy2
+AddReg=AlteraUSBBlaster.NT.AddReg
+
+[AlteraUSBBlaster.NTamd64]
+CopyFiles=AlteraUSBBlaster.NTamd64.Copy,AlteraUSBBlaster.NTamd64.Copy2,AlteraUSBBlaster.NTamd64.Copy3
+AddReg=AlteraUSBBlaster.NT.AddReg
+
+[AlteraUSBBlaster.NT.Services]
+AddService = AlteraUSBBlaster, 0x00000002, AlteraUSBBlaster.NT.AddService
+
+[AlteraUSBBlaster.NTamd64.Services]
+AddService = AlteraUSBBlaster, 0x00000002, AlteraUSBBlaster.NT.AddService
+
+[AlteraUSBBlaster.NT.AddService]
+DisplayName = %SvcDesc%
+ServiceType = 1 ; SERVICE_KERNEL_DRIVER
+StartType = 3 ; SERVICE_DEMAND_START
+ErrorControl = 1 ; SERVICE_ERROR_NORMAL
+ServiceBinary = %10%\system32\drivers\ftdibus.sys
+LoadOrderGroup = Base
+AddReg = AlteraUSBBlaster.NT.AddService.AddReg
+
+[AlteraUSBBlaster.NT.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,ftdibus.sys
+HKR,,EnumPropPages32,,"ftbusui.dll,FTBUSUIPropPageProvider"
+
+[AlteraUSBBlaster.NT.AddService.AddReg]
+;HKR,Parameters,"LocIds",1,31,00,00,00,32,00,00,00,00
+;HKR,Parameters,"RetryResetCount",0x10001,50
+
+[AlteraUSBBlaster.NT.Copy]
+ftdibus.sys
+
+[AlteraUSBBlaster.NT.Copy2]
+ftbusui.dll
+ftd2xx.dll
+FTLang.dll
+
+[AlteraUSBBlaster.NTamd64.Copy]
+ftdibus.sys
+
+[AlteraUSBBlaster.NTamd64.Copy2]
+ftbusui.dll
+ftd2xx.dll,ftd2xx64.dll
+FTLang.dll
+
+[AlteraUSBBlaster.NTamd64.Copy3]
+ftd2xx.dll
+
+[AlteraUSBBlaster.NT.HW]
+AddReg=AlteraUSBBlaster.NT.HW.AddReg
+
+[AlteraUSBBlaster.NTamd64.HW]
+AddReg=AlteraUSBBlaster.NT.HW.AddReg
+
+[AlteraUSBBlaster.NT.HW.AddReg]
+HKR,,"ConfigData",0x00010001,16
+
+[Strings]
+Altera="Altera"
+DESC="Altera USB-Blaster Device Driver Package"
+DriversDisk="Altera USB-Blaster Device Driver Disk"
+USB\VID_09FB&PID_6001.DeviceDesc="Altera USB-Blaster"
+USB\VID_09FB&PID_6002.DeviceDesc="Altera Cubic Cyclonium"
+USB\VID_09FB&PID_6003.DeviceDesc="Altera Nios II Evaluation Board"
+USB\VID_09FB&PID_6004.DeviceDesc="Altera Cyclone III EP3C25 Starter Kit"
+USB\VID_09FB&PID_6005.DeviceDesc="Altera Cyclone III EP3C120 Development Kit"
+USB\VID_09FB&PID_6006.DeviceDesc="Altera Stratix III EP3SL150 Development Kit"
+USB\VID_09FB&PID_6007.DeviceDesc="Altera Stratix III EP3SL340 Development Kit"
+USB\VID_09FB&PID_6008.DeviceDesc="Altera Nios Embedded Evaluation Kit"
+USB\VID_09FB&PID_6009.DeviceDesc="Altera Nios Development Kit, Cyclone III Edition"
+WINUN="Software\Microsoft\Windows\CurrentVersion\Uninstall"
+SvcDesc="Altera USB-Blaster Device Driver"
+ClassName="USB"

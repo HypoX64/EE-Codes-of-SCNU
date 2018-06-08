@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\Hypo\OneDrive\0Á·Ï°&×÷Æ·\VHDL\LED\PCB_Project\PCB1.PcbDoc
+Date         : 2017/5/19
+Time         : 19:37:04
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 24
+    Connections routed, 24
+    Connections remaining, 0
+count : 4

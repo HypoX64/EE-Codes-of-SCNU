@@ -1,0 +1,28 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY Encoder3_8 IS
+	PORT(
+		key1,key2,key3,key4,key5: IN STD_LOGIC;
+		code:	OUT STD_LOGIC_VECTOR(2 downto 0);
+		);
+END Encoder3_8;
+
+ARCHITECTURE example OF Encoder3_8 IS
+	SIGNAL notkey: std_logic;
+BEGIN
+	PROCESS(key1)
+	BEGIN
+		if key1 = '0' then		--S2
+			code <= "010";
+		elsif key2 = '0' then	--S3
+			code <= "011";
+		elsif key3 = '0' then	--S4
+			code <= "100";	
+		elsif key4 = '0' then	--S5
+			code <= "101";
+		elsif key5 = '0' then	--S6
+			code <= "110";
+		
+	END PROCESS;
+END example;

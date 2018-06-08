@@ -1,0 +1,10 @@
+Added Component: Designator=R1(8P4R_0603)
+Added Pin To Net: NetName=NetC_R_2 Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R1-2
+Added Pin To Net: NetName=NetC_Y_2 Pin=R1-3
+Added Pin To Net: NetName=GND Pin=R1-4
+Added Pin To Net: NetName=NetC_G_2 Pin=R1-5
+Added Pin To Net: NetName=GND Pin=R1-6
+Added Pin To Net: NetName=NetP_R_2 Pin=R1-7
+Added Pin To Net: NetName=GND Pin=R1-8
+Added Member To Class: ClassName=Sheet1 Member=Component R1 1K

@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'sysclk'
+Slack : -6.835
+TNS   : -224.386
+
+Type  : Slow Model Setup 'clkdiv:div|Q_s'
+Slack : -3.698
+TNS   : -29.735
+
+Type  : Slow Model Setup 'clkdiv:div|Q_min'
+Slack : -3.087
+TNS   : -56.841
+
+Type  : Slow Model Setup 'clkdiv:div|Q_ms'
+Slack : -1.931
+TNS   : -15.215
+
+Type  : Slow Model Hold 'sysclk'
+Slack : -2.543
+TNS   : -5.065
+
+Type  : Slow Model Hold 'clkdiv:div|Q_ms'
+Slack : -2.061
+TNS   : -2.061
+
+Type  : Slow Model Hold 'clkdiv:div|Q_min'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clkdiv:div|Q_s'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clkdiv:div|Q_min'
+Slack : -2.762
+TNS   : -61.545
+
+Type  : Slow Model Recovery 'sysclk'
+Slack : -1.513
+TNS   : -6.052
+
+Type  : Slow Model Recovery 'clkdiv:div|Q_s'
+Slack : -1.475
+TNS   : -12.131
+
+Type  : Slow Model Removal 'clkdiv:div|Q_s'
+Slack : 1.918
+TNS   : 0.000
+
+Type  : Slow Model Removal 'sysclk'
+Slack : 1.942
+TNS   : 0.000
+
+Type  : Slow Model Removal 'clkdiv:div|Q_min'
+Slack : 2.261
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'sysclk'
+Slack : -1.941
+TNS   : -110.273
+
+Type  : Slow Model Minimum Pulse Width 'clkdiv:div|Q_min'
+Slack : -0.742
+TNS   : -35.616
+
+Type  : Slow Model Minimum Pulse Width 'clkdiv:div|Q_s'
+Slack : -0.742
+TNS   : -20.776
+
+Type  : Slow Model Minimum Pulse Width 'clkdiv:div|Q_ms'
+Slack : -0.742
+TNS   : -17.808
+
+Type  : Fast Model Setup 'sysclk'
+Slack : -1.553
+TNS   : -31.277
+
+Type  : Fast Model Setup 'clkdiv:div|Q_s'
+Slack : -0.573
+TNS   : -1.919
+
+Type  : Fast Model Setup 'clkdiv:div|Q_min'
+Slack : -0.282
+TNS   : -4.535
+
+Type  : Fast Model Setup 'clkdiv:div|Q_ms'
+Slack : 0.029
+TNS   : 0.000
+
+Type  : Fast Model Hold 'sysclk'
+Slack : -1.346
+TNS   : -2.678
+
+Type  : Fast Model Hold 'clkdiv:div|Q_ms'
+Slack : -1.038
+TNS   : -1.038
+
+Type  : Fast Model Hold 'clkdiv:div|Q_min'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clkdiv:div|Q_s'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clkdiv:div|Q_min'
+Slack : -0.373
+TNS   : -7.395
+
+Type  : Fast Model Recovery 'sysclk'
+Slack : -0.006
+TNS   : -0.024
+
+Type  : Fast Model Recovery 'clkdiv:div|Q_s'
+Slack : 0.051
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clkdiv:div|Q_s'
+Slack : 0.753
+TNS   : 0.000
+
+Type  : Fast Model Removal 'sysclk'
+Slack : 0.765
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clkdiv:div|Q_min'
+Slack : 0.882
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'sysclk'
+Slack : -1.380
+TNS   : -74.380
+
+Type  : Fast Model Minimum Pulse Width 'clkdiv:div|Q_min'
+Slack : -0.500
+TNS   : -24.000
+
+Type  : Fast Model Minimum Pulse Width 'clkdiv:div|Q_s'
+Slack : -0.500
+TNS   : -14.000
+
+Type  : Fast Model Minimum Pulse Width 'clkdiv:div|Q_ms'
+Slack : -0.500
+TNS   : -12.000
+
+------------------------------------------------------------

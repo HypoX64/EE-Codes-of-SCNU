@@ -1,0 +1,94 @@
+# ADT Project File, Format Version 1.00
+# WARNING: DO NOT EDIT OR DELETE THIS FILE!
+
+[APJ begin]
+    Active Config=_string(DEBUG)
+    [Project begin]
+        ProjectName=_string(asse1)
+        Config Numbers=_long(2)
+    [Project end]
+    [Config begin]
+        [Config0 begin]
+            AutoScript=_bool(false)
+            DownCase=_long(0)
+            DownAddr=_long(0)
+            Dir=_string()
+            Build Modify Flag=_long(1)
+            CommType=_string(PARALLEL)
+            Compile Command Line=_string(-gdwarf-2 -c $(SrcFile) -o.\debug\$(ObjFile))
+            ExecFromEntry=_bool(false)
+            UseMemmap=_bool(false)
+            Assemble Command Line=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+            Endian=_bool(false)
+            AutoDown=_bool(false)
+            Verify=_bool(false)
+            Link Command Type=_string(Exe)
+            Symbol=_string()
+            Download=_string()
+            AutoScriptString=_string()
+            Device=_string(SoftSim)
+            Config Name=_string(DEBUG)
+            CommPort=_string(LPT1)
+            UseMemmapString=_string()
+            ExecFromDown=_bool(false)
+            Link Command Line=_string(-T.\ldscript -o.\debug\$(TargetName) $(ObjFiles))
+        [Config0 end]
+        [Config1 begin]
+            CommType=_string(PARALLEL)
+            Link Command Line=_string(-o.\release\$(TargetName) $(ObjFiles))
+            Dir=_string()
+            Assemble Command Line=_string($(SrcFile) -o.\release\$(ObjFile))
+            Endian=_bool(false)
+            Verify=_bool(false)
+            UseMemmapString=_string()
+            AutoDown=_bool(false)
+            Symbol=_string()
+            Build Modify Flag=_long(0)
+            Device=_string(SoftSim)
+            Download=_string()
+            Config Name=_string(RELEASE)
+            AutoScriptString=_string()
+            CommPort=_string(LPT1)
+            Compile Command Line=_string(-c $(SrcFile) -o.\release\$(ObjFile))
+            Link Command Type=_string(Exe)
+            AutoScript=_bool(false)
+            DownCase=_long(0)
+            UseMemmap=_bool(false)
+            ExecFromDown=_bool(false)
+            DownAddr=_long(0)
+            ExecFromEntry=_bool(false)
+        [Config1 end]
+    [Config end]
+    [File begin]
+        [Dir_0_2 begin]
+            File Config Number=_long(0)
+            Dir Number=_long(0)
+            Dir Name=_string(Assemble files)
+            [File_1_0 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\asse1.s,false,false,0,0)
+            [File_1_0 end]
+            File Number=_long(1)
+        [Dir_0_2 end]
+        File Number=_long(0)
+        [Dir_0_0 begin]
+            File Number=_long(0)
+            File Config Number=_long(0)
+            Dir Number=_long(0)
+            Dir Name=_string(C source files)
+        [Dir_0_0 end]
+        [Dir_0_1 begin]
+            Dir Number=_long(0)
+            Dir Name=_string(C head files)
+            File Config Number=_long(0)
+            File Number=_long(0)
+        [Dir_0_1 end]
+        [Dir_0_3 begin]
+            File Number=_long(0)
+            File Config Number=_long(0)
+            Dir Name=_string(MISC files)
+            Dir Number=_long(0)
+        [Dir_0_3 end]
+        Dir Number=_long(4)
+    [File end]
+[APJ end]

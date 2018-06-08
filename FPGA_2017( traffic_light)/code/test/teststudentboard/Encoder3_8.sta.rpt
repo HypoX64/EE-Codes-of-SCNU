@@ -1,0 +1,468 @@
+TimeQuest Timing Analyzer report for Encoder3_8
+Mon May 15 21:11:00 2017
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name      ; Encoder3_8                                          ;
+; Device Family      ; Cyclone II                                          ;
+; Device Name        ; EP2C5T144C8                                         ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Unavailable                                         ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Propagation Delay                                          ;
++------------+-------------+--------+-------+-------+--------+
+; Input Port ; Output Port ; RR     ; RF    ; FR    ; FF     ;
++------------+-------------+--------+-------+-------+--------+
+; key1       ; seg7data[2] ;        ; 9.269 ; 9.269 ;        ;
+; key1       ; seg7data[5] ;        ; 8.684 ; 8.684 ;        ;
+; key1       ; seg7data[6] ; 8.336  ;       ;       ; 8.336  ;
+; key2       ; seg7data[2] ; 9.728  ;       ;       ; 9.728  ;
+; key2       ; seg7data[4] ;        ; 7.863 ; 7.863 ;        ;
+; key2       ; seg7data[5] ;        ; 8.846 ; 8.846 ;        ;
+; key2       ; seg7data[6] ; 8.500  ;       ;       ; 8.500  ;
+; key3       ; seg7data[0] ;        ; 9.073 ; 9.073 ;        ;
+; key3       ; seg7data[2] ; 9.587  ;       ;       ; 9.587  ;
+; key3       ; seg7data[3] ;        ; 8.854 ; 8.854 ;        ;
+; key3       ; seg7data[4] ;        ; 7.798 ; 7.798 ;        ;
+; key3       ; seg7data[5] ; 8.322  ;       ;       ; 8.322  ;
+; key3       ; seg7data[6] ; 7.963  ;       ;       ; 7.963  ;
+; key4       ; seg7data[0] ;        ; 8.981 ; 8.981 ;        ;
+; key4       ; seg7data[1] ;        ; 8.543 ; 8.543 ;        ;
+; key4       ; seg7data[2] ;        ; 9.807 ; 9.807 ;        ;
+; key4       ; seg7data[3] ;        ; 8.762 ; 8.762 ;        ;
+; key4       ; seg7data[4] ;        ; 8.232 ; 8.232 ;        ;
+; key4       ; seg7data[5] ;        ; 7.815 ; 7.815 ;        ;
+; key4       ; seg7data[6] ;        ; 7.460 ; 7.460 ;        ;
+; key4       ; seg7data[7] ; 7.829  ;       ;       ; 7.829  ;
+; key5       ; seg7data[0] ; 13.021 ;       ;       ; 13.021 ;
+; key5       ; seg7data[1] ; 13.001 ;       ;       ; 13.001 ;
+; key5       ; seg7data[2] ; 12.797 ;       ;       ; 12.797 ;
+; key5       ; seg7data[3] ; 12.802 ;       ;       ; 12.802 ;
+; key5       ; seg7data[4] ; 12.567 ;       ;       ; 12.567 ;
+; key5       ; seg7data[5] ; 12.267 ;       ;       ; 12.267 ;
+; key5       ; seg7data[6] ; 11.913 ;       ;       ; 11.913 ;
+; key5       ; seg7data[7] ; 12.277 ;       ;       ; 12.277 ;
++------------+-------------+--------+-------+-------+--------+
+
+
++------------------------------------------------------------+
+; Minimum Propagation Delay                                  ;
++------------+-------------+--------+-------+-------+--------+
+; Input Port ; Output Port ; RR     ; RF    ; FR    ; FF     ;
++------------+-------------+--------+-------+-------+--------+
+; key1       ; seg7data[2] ;        ; 9.269 ; 9.269 ;        ;
+; key1       ; seg7data[5] ;        ; 8.684 ; 8.684 ;        ;
+; key1       ; seg7data[6] ; 8.336  ;       ;       ; 8.336  ;
+; key2       ; seg7data[2] ; 9.728  ;       ;       ; 9.728  ;
+; key2       ; seg7data[4] ;        ; 7.863 ; 7.863 ;        ;
+; key2       ; seg7data[5] ;        ; 8.846 ; 8.846 ;        ;
+; key2       ; seg7data[6] ; 8.500  ;       ;       ; 8.500  ;
+; key3       ; seg7data[0] ;        ; 9.073 ; 9.073 ;        ;
+; key3       ; seg7data[2] ; 9.587  ;       ;       ; 9.587  ;
+; key3       ; seg7data[3] ;        ; 8.854 ; 8.854 ;        ;
+; key3       ; seg7data[4] ;        ; 7.798 ; 7.798 ;        ;
+; key3       ; seg7data[5] ; 8.322  ;       ;       ; 8.322  ;
+; key3       ; seg7data[6] ; 7.963  ;       ;       ; 7.963  ;
+; key4       ; seg7data[0] ;        ; 8.981 ; 8.981 ;        ;
+; key4       ; seg7data[1] ;        ; 8.543 ; 8.543 ;        ;
+; key4       ; seg7data[2] ;        ; 9.807 ; 9.807 ;        ;
+; key4       ; seg7data[3] ;        ; 8.762 ; 8.762 ;        ;
+; key4       ; seg7data[4] ;        ; 8.232 ; 8.232 ;        ;
+; key4       ; seg7data[5] ;        ; 7.815 ; 7.815 ;        ;
+; key4       ; seg7data[6] ;        ; 7.460 ; 7.460 ;        ;
+; key4       ; seg7data[7] ; 7.829  ;       ;       ; 7.829  ;
+; key5       ; seg7data[0] ; 13.021 ;       ;       ; 13.021 ;
+; key5       ; seg7data[1] ; 13.001 ;       ;       ; 13.001 ;
+; key5       ; seg7data[2] ; 12.797 ;       ;       ; 12.797 ;
+; key5       ; seg7data[3] ; 12.802 ;       ;       ; 12.802 ;
+; key5       ; seg7data[4] ; 12.567 ;       ;       ; 12.567 ;
+; key5       ; seg7data[5] ; 12.267 ;       ;       ; 12.267 ;
+; key5       ; seg7data[6] ; 11.913 ;       ;       ; 11.913 ;
+; key5       ; seg7data[7] ; 12.277 ;       ;       ; 12.277 ;
++------------+-------------+--------+-------+-------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; key1       ; seg7data[2] ;       ; 3.641 ; 3.641 ;       ;
+; key1       ; seg7data[5] ;       ; 3.455 ; 3.455 ;       ;
+; key1       ; seg7data[6] ; 3.346 ;       ;       ; 3.346 ;
+; key2       ; seg7data[2] ; 3.785 ;       ;       ; 3.785 ;
+; key2       ; seg7data[4] ;       ; 3.210 ; 3.210 ;       ;
+; key2       ; seg7data[5] ;       ; 3.496 ; 3.496 ;       ;
+; key2       ; seg7data[6] ; 3.392 ;       ;       ; 3.392 ;
+; key3       ; seg7data[0] ;       ; 3.591 ; 3.591 ;       ;
+; key3       ; seg7data[2] ; 3.770 ;       ;       ; 3.770 ;
+; key3       ; seg7data[3] ;       ; 3.556 ; 3.556 ;       ;
+; key3       ; seg7data[4] ;       ; 3.203 ; 3.203 ;       ;
+; key3       ; seg7data[5] ; 3.366 ;       ;       ; 3.366 ;
+; key3       ; seg7data[6] ; 3.254 ;       ;       ; 3.254 ;
+; key4       ; seg7data[0] ;       ; 3.557 ; 3.557 ;       ;
+; key4       ; seg7data[1] ;       ; 3.426 ; 3.426 ;       ;
+; key4       ; seg7data[2] ;       ; 3.823 ; 3.823 ;       ;
+; key4       ; seg7data[3] ;       ; 3.522 ; 3.522 ;       ;
+; key4       ; seg7data[4] ;       ; 3.321 ; 3.321 ;       ;
+; key4       ; seg7data[5] ;       ; 3.209 ; 3.209 ;       ;
+; key4       ; seg7data[6] ;       ; 3.106 ; 3.106 ;       ;
+; key4       ; seg7data[7] ; 3.216 ;       ;       ; 3.216 ;
+; key5       ; seg7data[0] ; 5.841 ;       ;       ; 5.841 ;
+; key5       ; seg7data[1] ; 5.829 ;       ;       ; 5.829 ;
+; key5       ; seg7data[2] ; 5.778 ;       ;       ; 5.778 ;
+; key5       ; seg7data[3] ; 5.806 ;       ;       ; 5.806 ;
+; key5       ; seg7data[4] ; 5.662 ;       ;       ; 5.662 ;
+; key5       ; seg7data[5] ; 5.609 ;       ;       ; 5.609 ;
+; key5       ; seg7data[6] ; 5.479 ;       ;       ; 5.479 ;
+; key5       ; seg7data[7] ; 5.617 ;       ;       ; 5.617 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; key1       ; seg7data[2] ;       ; 3.641 ; 3.641 ;       ;
+; key1       ; seg7data[5] ;       ; 3.455 ; 3.455 ;       ;
+; key1       ; seg7data[6] ; 3.346 ;       ;       ; 3.346 ;
+; key2       ; seg7data[2] ; 3.785 ;       ;       ; 3.785 ;
+; key2       ; seg7data[4] ;       ; 3.210 ; 3.210 ;       ;
+; key2       ; seg7data[5] ;       ; 3.496 ; 3.496 ;       ;
+; key2       ; seg7data[6] ; 3.392 ;       ;       ; 3.392 ;
+; key3       ; seg7data[0] ;       ; 3.591 ; 3.591 ;       ;
+; key3       ; seg7data[2] ; 3.770 ;       ;       ; 3.770 ;
+; key3       ; seg7data[3] ;       ; 3.556 ; 3.556 ;       ;
+; key3       ; seg7data[4] ;       ; 3.203 ; 3.203 ;       ;
+; key3       ; seg7data[5] ; 3.366 ;       ;       ; 3.366 ;
+; key3       ; seg7data[6] ; 3.254 ;       ;       ; 3.254 ;
+; key4       ; seg7data[0] ;       ; 3.557 ; 3.557 ;       ;
+; key4       ; seg7data[1] ;       ; 3.426 ; 3.426 ;       ;
+; key4       ; seg7data[2] ;       ; 3.823 ; 3.823 ;       ;
+; key4       ; seg7data[3] ;       ; 3.522 ; 3.522 ;       ;
+; key4       ; seg7data[4] ;       ; 3.321 ; 3.321 ;       ;
+; key4       ; seg7data[5] ;       ; 3.209 ; 3.209 ;       ;
+; key4       ; seg7data[6] ;       ; 3.106 ; 3.106 ;       ;
+; key4       ; seg7data[7] ; 3.216 ;       ;       ; 3.216 ;
+; key5       ; seg7data[0] ; 5.841 ;       ;       ; 5.841 ;
+; key5       ; seg7data[1] ; 5.829 ;       ;       ; 5.829 ;
+; key5       ; seg7data[2] ; 5.778 ;       ;       ; 5.778 ;
+; key5       ; seg7data[3] ; 5.806 ;       ;       ; 5.806 ;
+; key5       ; seg7data[4] ; 5.662 ;       ;       ; 5.662 ;
+; key5       ; seg7data[5] ; 5.609 ;       ;       ; 5.609 ;
+; key5       ; seg7data[6] ; 5.479 ;       ;       ; 5.479 ;
+; key5       ; seg7data[7] ; 5.617 ;       ;       ; 5.617 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++------------------------------------------------------------+
+; Progagation Delay                                          ;
++------------+-------------+--------+-------+-------+--------+
+; Input Port ; Output Port ; RR     ; RF    ; FR    ; FF     ;
++------------+-------------+--------+-------+-------+--------+
+; key1       ; seg7data[2] ;        ; 9.269 ; 9.269 ;        ;
+; key1       ; seg7data[5] ;        ; 8.684 ; 8.684 ;        ;
+; key1       ; seg7data[6] ; 8.336  ;       ;       ; 8.336  ;
+; key2       ; seg7data[2] ; 9.728  ;       ;       ; 9.728  ;
+; key2       ; seg7data[4] ;        ; 7.863 ; 7.863 ;        ;
+; key2       ; seg7data[5] ;        ; 8.846 ; 8.846 ;        ;
+; key2       ; seg7data[6] ; 8.500  ;       ;       ; 8.500  ;
+; key3       ; seg7data[0] ;        ; 9.073 ; 9.073 ;        ;
+; key3       ; seg7data[2] ; 9.587  ;       ;       ; 9.587  ;
+; key3       ; seg7data[3] ;        ; 8.854 ; 8.854 ;        ;
+; key3       ; seg7data[4] ;        ; 7.798 ; 7.798 ;        ;
+; key3       ; seg7data[5] ; 8.322  ;       ;       ; 8.322  ;
+; key3       ; seg7data[6] ; 7.963  ;       ;       ; 7.963  ;
+; key4       ; seg7data[0] ;        ; 8.981 ; 8.981 ;        ;
+; key4       ; seg7data[1] ;        ; 8.543 ; 8.543 ;        ;
+; key4       ; seg7data[2] ;        ; 9.807 ; 9.807 ;        ;
+; key4       ; seg7data[3] ;        ; 8.762 ; 8.762 ;        ;
+; key4       ; seg7data[4] ;        ; 8.232 ; 8.232 ;        ;
+; key4       ; seg7data[5] ;        ; 7.815 ; 7.815 ;        ;
+; key4       ; seg7data[6] ;        ; 7.460 ; 7.460 ;        ;
+; key4       ; seg7data[7] ; 7.829  ;       ;       ; 7.829  ;
+; key5       ; seg7data[0] ; 13.021 ;       ;       ; 13.021 ;
+; key5       ; seg7data[1] ; 13.001 ;       ;       ; 13.001 ;
+; key5       ; seg7data[2] ; 12.797 ;       ;       ; 12.797 ;
+; key5       ; seg7data[3] ; 12.802 ;       ;       ; 12.802 ;
+; key5       ; seg7data[4] ; 12.567 ;       ;       ; 12.567 ;
+; key5       ; seg7data[5] ; 12.267 ;       ;       ; 12.267 ;
+; key5       ; seg7data[6] ; 11.913 ;       ;       ; 11.913 ;
+; key5       ; seg7data[7] ; 12.277 ;       ;       ; 12.277 ;
++------------+-------------+--------+-------+-------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; key1       ; seg7data[2] ;       ; 3.641 ; 3.641 ;       ;
+; key1       ; seg7data[5] ;       ; 3.455 ; 3.455 ;       ;
+; key1       ; seg7data[6] ; 3.346 ;       ;       ; 3.346 ;
+; key2       ; seg7data[2] ; 3.785 ;       ;       ; 3.785 ;
+; key2       ; seg7data[4] ;       ; 3.210 ; 3.210 ;       ;
+; key2       ; seg7data[5] ;       ; 3.496 ; 3.496 ;       ;
+; key2       ; seg7data[6] ; 3.392 ;       ;       ; 3.392 ;
+; key3       ; seg7data[0] ;       ; 3.591 ; 3.591 ;       ;
+; key3       ; seg7data[2] ; 3.770 ;       ;       ; 3.770 ;
+; key3       ; seg7data[3] ;       ; 3.556 ; 3.556 ;       ;
+; key3       ; seg7data[4] ;       ; 3.203 ; 3.203 ;       ;
+; key3       ; seg7data[5] ; 3.366 ;       ;       ; 3.366 ;
+; key3       ; seg7data[6] ; 3.254 ;       ;       ; 3.254 ;
+; key4       ; seg7data[0] ;       ; 3.557 ; 3.557 ;       ;
+; key4       ; seg7data[1] ;       ; 3.426 ; 3.426 ;       ;
+; key4       ; seg7data[2] ;       ; 3.823 ; 3.823 ;       ;
+; key4       ; seg7data[3] ;       ; 3.522 ; 3.522 ;       ;
+; key4       ; seg7data[4] ;       ; 3.321 ; 3.321 ;       ;
+; key4       ; seg7data[5] ;       ; 3.209 ; 3.209 ;       ;
+; key4       ; seg7data[6] ;       ; 3.106 ; 3.106 ;       ;
+; key4       ; seg7data[7] ; 3.216 ;       ;       ; 3.216 ;
+; key5       ; seg7data[0] ; 5.841 ;       ;       ; 5.841 ;
+; key5       ; seg7data[1] ; 5.829 ;       ;       ; 5.829 ;
+; key5       ; seg7data[2] ; 5.778 ;       ;       ; 5.778 ;
+; key5       ; seg7data[3] ; 5.806 ;       ;       ; 5.806 ;
+; key5       ; seg7data[4] ; 5.662 ;       ;       ; 5.662 ;
+; key5       ; seg7data[5] ; 5.609 ;       ;       ; 5.609 ;
+; key5       ; seg7data[6] ; 5.479 ;       ;       ; 5.479 ;
+; key5       ; seg7data[7] ; 5.617 ;       ;       ; 5.617 ;
++------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 29    ; 29   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 29    ; 29   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Mon May 15 21:11:00 2017
+Info: Command: quartus_sta Encoder3_8 -c Encoder3_8
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Encoder3_8.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 463 megabytes
+    Info: Processing ended: Mon May 15 21:11:00 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

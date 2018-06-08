@@ -1,0 +1,368 @@
+Analysis & Synthesis report for test
+Thu May 18 17:05:40 2017
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "clkdiv:div"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu May 18 17:05:40 2017       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; test                                        ;
+; Top-level Entity Name              ; test                                        ;
+; Family                             ; Cyclone II                                  ;
+; Total logic elements               ; 285                                         ;
+;     Total combinational functions  ; 285                                         ;
+;     Dedicated logic registers      ; 127                                         ;
+; Total registers                    ; 127                                         ;
+; Total pins                         ; 18                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C5T144C8        ;                    ;
+; Top-level entity name                                                      ; test               ; test               ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+; test.vhd                         ; yes             ; User VHDL File  ; C:/Users/Hypo/OneDrive/VHDL/test_1/test.vhd    ;         ;
+; seg7led.vhd                      ; yes             ; User VHDL File  ; C:/Users/Hypo/OneDrive/VHDL/test_1/seg7led.vhd ;         ;
+; clkdiv.vhd                       ; yes             ; User VHDL File  ; C:/Users/Hypo/OneDrive/VHDL/test_1/clkdiv.vhd  ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 285    ;
+;                                             ;        ;
+; Total combinational functions               ; 285    ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 119    ;
+;     -- 3 input functions                    ; 36     ;
+;     -- <=2 input functions                  ; 130    ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 181    ;
+;     -- arithmetic mode                      ; 104    ;
+;                                             ;        ;
+; Total registers                             ; 127    ;
+;     -- Dedicated logic registers            ; 127    ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 18     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; sysclk ;
+; Maximum fan-out                             ; 91     ;
+; Total fan-out                               ; 1179   ;
+; Average fan-out                             ; 2.74   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |test                      ; 285 (185)         ; 127 (70)     ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |test               ;              ;
+;    |clkdiv:div|            ; 93 (93)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|clkdiv:div    ;              ;
+;    |seg7led:dis|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|seg7led:dis   ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; data_time_nightin_low[0]                           ; key_signal[3]       ; yes                    ;
+; data_mode[0]                                       ; key_signal[2]       ; yes                    ;
+; data_mode[1]                                       ; key_signal[2]       ; yes                    ;
+; data_mode[2]                                       ; key_signal[2]       ; yes                    ;
+; data_mode[3]                                       ; key_signal[2]       ; yes                    ;
+; data_time_nightin_low[1]                           ; key_signal[3]       ; yes                    ;
+; data_time_nightin_low[2]                           ; key_signal[3]       ; yes                    ;
+; data_time_nightin_low[3]                           ; key_signal[3]       ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------+
+; Registers Removed During Synthesis                                ;
++---------------------------------------+---------------------------+
+; Register name                         ; Reason for Removal        ;
++---------------------------------------+---------------------------+
+; data_h[0]                             ; Merged with data_h_low[0] ;
+; Total Number of Removed Registers = 1 ;                           ;
++---------------------------------------+---------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 127   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 64    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |test|seg7com              ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |test|tmp_seg7data[0]      ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |test|tmp_seg7data[3]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clkdiv:div"                                                                                 ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; clk_out_s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; clk_out_h    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; clk_out_50ms ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Thu May 18 17:05:38 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file test.vhd
+    Info (12022): Found design unit 1: test-example
+    Info (12023): Found entity 1: test
+Info (12021): Found 2 design units, including 1 entities, in source file encoder8_3.vhd
+    Info (12022): Found design unit 1: Encoder8_3-example
+    Info (12023): Found entity 1: Encoder8_3
+Info (12021): Found 2 design units, including 1 entities, in source file seg7led.vhd
+    Info (12022): Found design unit 1: seg7led-example
+    Info (12023): Found entity 1: seg7led
+Info (12021): Found 2 design units, including 1 entities, in source file clkdiv.vhd
+    Info (12022): Found design unit 1: clkdiv-div
+    Info (12023): Found entity 1: clkdiv
+Info (12127): Elaborating entity "test" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at test.vhd(36): object "tmp_sig_s" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at test.vhd(39): object "tmp_sig_h" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at test.vhd(40): object "tmp_sig_50ms" assigned a value but never read
+Warning (10540): VHDL Signal Declaration warning at test.vhd(56): used explicit default value for signal "data_time_nightin_high" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at test.vhd(121): signal "key_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at test.vhd(122): signal "data_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at test.vhd(124): signal "data_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at test.vhd(119): inferring latch(es) for signal or variable "data_mode", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at test.vhd(133): signal "key_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at test.vhd(131): inferring latch(es) for signal or variable "data_time_nightin_low", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at test.vhd(158): signal "data_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at test.vhd(172): signal "data_mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at test.vhd(195): signal "data_time_nightin_low" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at test.vhd(198): signal "data_time_nightin_high" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at test.vhd(207): signal "tmp_sig_min" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at test.vhd(227): signal "data_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (10041): Inferred latch for "data_time_nightin_low[0]" at test.vhd(131)
+Info (10041): Inferred latch for "data_time_nightin_low[1]" at test.vhd(131)
+Info (10041): Inferred latch for "data_time_nightin_low[2]" at test.vhd(131)
+Info (10041): Inferred latch for "data_time_nightin_low[3]" at test.vhd(131)
+Info (10041): Inferred latch for "data_time_nightin_low[4]" at test.vhd(131)
+Info (10041): Inferred latch for "data_time_nightin_low[5]" at test.vhd(131)
+Info (10041): Inferred latch for "data_time_nightin_low[6]" at test.vhd(131)
+Info (10041): Inferred latch for "data_mode[0]" at test.vhd(119)
+Info (10041): Inferred latch for "data_mode[1]" at test.vhd(119)
+Info (10041): Inferred latch for "data_mode[2]" at test.vhd(119)
+Info (10041): Inferred latch for "data_mode[3]" at test.vhd(119)
+Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:div"
+Warning (10492): VHDL Process Statement warning at clkdiv.vhd(38): signal "Q_ms" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at clkdiv.vhd(52): signal "Q_50ms" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at clkdiv.vhd(66): signal "Q_s" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at clkdiv.vhd(79): signal "Q_min" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at clkdiv.vhd(92): signal "Q_h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "seg7led" for hierarchy "seg7led:dis"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg7data[7]" is stuck at VCC
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "key3"
+    Warning (15610): No output dependent on input pin "key4"
+    Warning (15610): No output dependent on input pin "key5"
+Info (21057): Implemented 343 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 325 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 531 megabytes
+    Info: Processing ended: Thu May 18 17:05:40 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,1334 @@
+# ADT Project File, Format Version 1.00
+# WARNING: DO NOT EDIT OR DELETE THIS FILE!
+
+[APJ begin]
+    Active Config=_string(DEBUG)
+    [Project begin]
+        ProjectName=_string(UC-GUI)
+        Config Numbers=_long(2)
+    [Project end]
+    [Config begin]
+        [Config0 begin]
+            AutoScript=_bool(false)
+            DownCase=_long(1)
+            DownAddr=_long(0)
+            Dir=_string()
+            Build Modify Flag=_long(1)
+            CommType=_string(PARALLEL)
+            Compile Command Line=_string(-gdwarf-2 -c -DLCD_TFT_8_0 -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ -I..\..\include -I..\ $(SrcFile) -o.\debug\$(ObjFile))
+            ExecFromEntry=_bool(false)
+            UseMemmap=_bool(false)
+            Assemble Command Line=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+            Endian=_bool(false)
+            AutoDown=_bool(false)
+            Verify=_bool(false)
+            Link Command Type=_string(Lib)
+            Symbol=_string()
+            Download=_string()
+            AutoScriptString=_string()
+            Device=_string(ARM7LPT)
+            Config Name=_string(DEBUG)
+            CommPort=_string(LPT1)
+            UseMemmapString=_string()
+            ExecFromDown=_bool(false)
+            Link Command Line=_string(-r ..\LIB\$(TargetName) $(ObjFiles))
+        [Config0 end]
+        [Config1 begin]
+            CommType=_string(PARALLEL)
+            Link Command Line=_string(-r .\release\$(TargetName) $(ObjFiles))
+            Dir=_string()
+            Assemble Command Line=_string($(SrcFile) -o.\release\$(ObjFile))
+            Endian=_bool(false)
+            Verify=_bool(false)
+            UseMemmapString=_string()
+            AutoDown=_bool(false)
+            Symbol=_string()
+            Build Modify Flag=_long(0)
+            Device=_string()
+            Download=_string()
+            Config Name=_string(RELEASE)
+            AutoScriptString=_string()
+            CommPort=_string(LPT1)
+            Compile Command Line=_string(-c $(SrcFile) -o.\release\$(ObjFile))
+            Link Command Type=_string(Lib)
+            AutoScript=_bool(false)
+            DownCase=_long(0)
+            UseMemmap=_bool(false)
+            ExecFromDown=_bool(false)
+            DownAddr=_long(0)
+            ExecFromEntry=_bool(false)
+        [Config1 end]
+    [Config end]
+    [File begin]
+        File Number=_long(0)
+        [Dir_0_0 begin]
+            File Number=_long(0)
+            File Config Number=_long(0)
+            Dir Number=_long(0)
+            Dir Name=_string(MISC files)
+        [Dir_0_0 end]
+        [Dir_0_1 begin]
+            [File_1_1 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\Config\GUITouchConf.h,false,false,0,0)
+            [File_1_1 end]
+            Dir Number=_long(0)
+            Dir Name=_string(Config)
+            [File_1_0 begin]
+                File Name=_string(.\Config\LCDConf.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_0 end]
+            File Config Number=_long(0)
+            [File_1_2 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\Config\GUIConf.h,false,false,0,0)
+            [File_1_2 end]
+            File Number=_long(3)
+        [Dir_0_1 end]
+        [Dir_0_6 begin]
+            Dir Name=_string(GUI-ConvertMono)
+            Dir Number=_long(0)
+            File Number=_long(4)
+            [File_1_1 begin]
+                File Name=_string(.\gui\ConvertMono\LCDP1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_1 end]
+            File Config Number=_long(0)
+            [File_1_2 begin]
+                File Name=_string(.\gui\ConvertMono\LCDP2.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_2 end]
+            [File_1_3 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\ConvertMono\LCDP4.c,false,false,0,0)
+            [File_1_3 end]
+            [File_1_0 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\ConvertMono\LCDP0.c,false,false,0,0)
+            [File_1_0 end]
+        [Dir_0_6 end]
+        [Dir_0_9 begin]
+            Dir Name=_string(GUI-LCDDriver)
+            File Number=_long(2)
+            Dir Number=_long(0)
+            File Config Number=_long(0)
+            [File_1_1 begin]
+                File Name=_string(.\gui\LCDDriver\LCD_X_S3C2410.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_1 end]
+            [File_1_0 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\LCDDriver\LCD_0.h,false,false,0,0)
+            [File_1_0 end]
+        [Dir_0_9 end]
+        [Dir_0_2 begin]
+            File Config Number=_long(0)
+            Dir Number=_long(0)
+            Dir Name=_string(GUI-MemDev)
+            [File_1_9 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\MemDev\GUIDEV_ReduceYSize.c,false,false,0,0)
+            [File_1_9 end]
+            [File_1_3 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\MemDev\GUIDEV_Banding.c,false,false,0,0)
+            [File_1_3 end]
+            [File_1_6 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\MemDev\GUIDEV_CopyFromLCD.c,false,false,0,0)
+            [File_1_6 end]
+            [File_1_0 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\MemDev\GUIDEV.c,false,false,0,0)
+            [File_1_0 end]
+            File Number=_long(13)
+            [File_1_10 begin]
+                File Name=_string(.\gui\MemDev\GUIDEV_SetOrg.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_10 end]
+            [File_1_12 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\MemDev\GUIDEV_UsageBM.c,false,false,0,0)
+            [File_1_12 end]
+            [File_1_7 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\MemDev\GUIDEV_GetYSize.c,false,false,0,0)
+            [File_1_7 end]
+            [File_1_1 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\MemDev\GUIDEV_AA.c,false,false,0,0)
+            [File_1_1 end]
+            [File_1_4 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\MemDev\GUIDEV_Clear.c,false,false,0,0)
+            [File_1_4 end]
+            [File_1_2 begin]
+                File Name=_string(.\gui\MemDev\GUIDEV_Auto.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_2 end]
+            [File_1_5 begin]
+                File Name=_string(.\gui\MemDev\GUIDEV_CmpWithLCD.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_5 end]
+            [File_1_8 begin]
+                File Name=_string(.\gui\MemDev\GUIDEV_Measure.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_8 end]
+            [File_1_11 begin]
+                File Name=_string(.\gui\MemDev\GUIDEV_Usage.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_11 end]
+        [Dir_0_2 end]
+        [Dir_0_3 begin]
+            [File_1_4 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Dialog.c,false,false,0,0)
+            [File_1_4 end]
+            [File_1_7 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\edit.c,false,false,0,0)
+            [File_1_7 end]
+            [File_1_1 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\button.h,false,false,0,0)
+            [File_1_1 end]
+            [File_1_20 begin]
+                File Name=_string(.\gui\Widget\GUI_EditString.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_20 end]
+            File Number=_long(43)
+            [File_1_35 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Terminal.h,false,false,0,0)
+            [File_1_35 end]
+            [File_1_38 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Widget.c,false,false,0,0)
+            [File_1_38 end]
+            [File_1_42 begin]
+                File Name=_string(.\gui\Widget\Widget_Simple.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_42 end]
+            [File_1_8 begin]
+                File Name=_string(.\gui\Widget\Edit.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_8 end]
+            [File_1_32 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Slider.c,false,false,0,0)
+            [File_1_32 end]
+            [File_1_2 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Checkbox.c,false,false,0,0)
+            [File_1_2 end]
+            [File_1_5 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Dialog.h,false,false,0,0)
+            [File_1_5 end]
+            [File_1_21 begin]
+                File Name=_string(.\gui\Widget\listbox.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_21 end]
+            File Config Number=_long(1)
+            [File_1_24 begin]
+                File Name=_string(.\gui\Widget\Marquee.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_24 end]
+            [File_1_27 begin]
+                File Name=_string(.\gui\Widget\ProgBar.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_27 end]
+            [File_1_14 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\framewin.c,false,false,0,0)
+            [File_1_14 end]
+            [File_1_17 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\GUI_EditDec.c,false,false,0,0)
+            [File_1_17 end]
+            [File_1_11 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\EditDec.c,false,false,0,0)
+            [File_1_11 end]
+            [File_1_39 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Widget.h,false,false,0,0)
+            [File_1_39 end]
+            [File_1_40 begin]
+                File Name=_string(.\gui\Widget\Widget_3D.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_40 end]
+            [File_1_33 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Slider.h,false,false,0,0)
+            [File_1_33 end]
+            [File_1_36 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Text.c,false,false,0,0)
+            [File_1_36 end]
+            [File_1_6 begin]
+                File Name=_string(.\gui\Widget\Dialog_Intern.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_6 end]
+            [File_1_9 begin]
+                File Name=_string(.\gui\Widget\Edit_Private.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_9 end]
+            [File_1_30 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Scrollbar.c,false,false,0,0)
+            [File_1_30 end]
+            [File_1_31 begin]
+                File Name=_string(.\gui\Widget\Scrollbar.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_31 end]
+            [File_1_34 begin]
+                File Name=_string(.\gui\Widget\Terminal.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_34 end]
+            [File_1_0 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\button.c,false,false,0,0)
+            [File_1_0 end]
+            [File_1_3 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Checkbox.h,false,false,0,0)
+            [File_1_3 end]
+            [File_1_22 begin]
+                File Name=_string(.\gui\Widget\LISTBOX.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_22 end]
+            [File_1_10 begin]
+                File Name=_string(.\gui\Widget\EditBin.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_10 end]
+            [File_1_18 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\GUI_EditFloat.c,false,false,0,0)
+            [File_1_18 end]
+            [File_1_25 begin]
+                File Name=_string(.\gui\Widget\messagebox.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_25 end]
+            [File_1_28 begin]
+                File Name=_string(.\gui\Widget\Radio.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_28 end]
+            [File_1_12 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\EditFloat.c,false,false,0,0)
+            [File_1_12 end]
+            [File_1_13 begin]
+                File Name=_string(.\gui\Widget\EditHex.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_13 end]
+            [File_1_15 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\FrameWin.h,false,false,0,0)
+            [File_1_15 end]
+            [File_1_16 begin]
+                File Name=_string(.\gui\Widget\GUI_EditBin.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_16 end]
+            [File_1_19 begin]
+                File Name=_string(.\gui\Widget\GUI_EditHex.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_19 end]
+            [File_1_29 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Radio.h,false,false,0,0)
+            [File_1_29 end]
+            [File Config [0] begin]
+                File Config Name=_string(DEBUG)
+                Compile Custom Option=_long(0)
+                Assemble Custom Option=_long(0)
+                Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                Exclude File From Build=_long(0)
+            [File Config [0] end]
+            [File_1_23 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\marquee.c,false,false,0,0)
+            [File_1_23 end]
+            [File_1_26 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\progbar.c,false,false,0,0)
+            [File_1_26 end]
+            [File_1_37 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Widget\Text.h,false,false,0,0)
+            [File_1_37 end]
+            [File_1_41 begin]
+                File Name=_string(.\gui\Widget\Widget_None.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_41 end]
+            Dir Name=_string(GUI-Widget)
+            Dir Number=_long(0)
+        [Dir_0_3 end]
+        [Dir_0_4 begin]
+            [File_1_9 begin]
+                File Name=_string(.\gui\WM\WM_BringToBottom.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_9 end]
+            [File_1_41 begin]
+                File Name=_string(.\gui\WM\WM_SetDesktopColor.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_41 end]
+            [File_1_20 begin]
+                File Name=_string(.\gui\WM\WM_GetInsideRect.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_20 end]
+            [File_1_23 begin]
+                File Name=_string(.\gui\WM\WM_GetParent.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_23 end]
+            [File_1_26 begin]
+                File Name=_string(.\gui\WM\WM_GetWindowSize.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_26 end]
+            [File_1_29 begin]
+                File Name=_string(.\gui\WM\WM_Intern.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_29 end]
+            [File_1_50 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WMMemDev.c,false,false,0,0)
+            [File_1_50 end]
+            [File_1_19 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_GetId.c,false,false,0,0)
+            [File_1_19 end]
+            [File_1_4 begin]
+                File Name=_string(.\gui\WM\WM__GetLastSibling.c,false,false,0,0)
+                [File Config [0] begin]
+                    Assemble Custom Option=_long(0)
+                    Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                    Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                    Compile Custom Option=_long(0)
+                    Exclude File From Build=_long(0)
+                    File Config Name=_string(DEBUG)
+                [File Config [0] end]
+                File Config Number=_long(1)
+            [File_1_4 end]
+            [File_1_6 begin]
+                File Name=_string(.\gui\WM\WM__Screen2Client.c,false,false,0,0)
+                File Config Number=_long(1)
+                [File Config [0] begin]
+                    Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                    Exclude File From Build=_long(0)
+                    Compile Custom Option=_long(0)
+                    File Config Name=_string(DEBUG)
+                    Assemble Custom Option=_long(0)
+                    Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                [File Config [0] end]
+            [File_1_6 end]
+            [File_1_7 begin]
+                File Name=_string(.\gui\WM\WM__SendMessage.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_7 end]
+            [File_1_13 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_GetBkColor.c,false,false,0,0)
+            [File_1_13 end]
+            [File_1_16 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_GetDialogItem.c,false,false,0,0)
+            [File_1_16 end]
+            [File_1_42 begin]
+                File Name=_string(.\gui\WM\WM_SetFocus.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_42 end]
+            [File_1_10 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_BringToTop.c,false,false,0,0)
+            [File_1_10 end]
+            [File_1_38 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_SetCallback.c,false,false,0,0)
+            [File_1_38 end]
+            [File_1_45 begin]
+                File Name=_string(.\gui\WM\WM_SetSize.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_45 end]
+            [File_1_48 begin]
+                File Name=_string(.\gui\WM\WM_Validate.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_48 end]
+            [File_1_1 begin]
+                File Name=_string(.\gui\WM\WM.H,false,false,0,0)
+                File Config Number=_long(1)
+                [File Config [0] begin]
+                    Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                    Exclude File From Build=_long(0)
+                    Assemble Custom Option=_long(0)
+                    Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                    File Config Name=_string(DEBUG)
+                    Compile Custom Option=_long(0)
+                [File Config [0] end]
+            [File_1_1 end]
+            [File_1_32 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_NotifyParent.c,false,false,0,0)
+            [File_1_32 end]
+            [File_1_35 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_ResizeWindow.c,false,false,0,0)
+            [File_1_35 end]
+            [File_1_21 begin]
+                File Name=_string(.\gui\WM\WM_GetNextSibling.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_21 end]
+            [File_1_24 begin]
+                File Name=_string(.\gui\WM\WM_GetScrollState.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_24 end]
+            Dir Name=_string(GUI-WM)
+            Dir Number=_long(0)
+            [File_1_12 begin]
+                File Name=_string(.\gui\WM\WM_EnableWindow.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_12 end]
+            [File_1_27 begin]
+                File Name=_string(.\gui\WM\WM_HasCaptured.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_27 end]
+            [File_1_51 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WMTouch.c,false,false,0,0)
+            [File_1_51 end]
+            [File_1_2 begin]
+                [File Config [0] begin]
+                    Assemble Custom Option=_long(0)
+                    Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                    Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                    File Config Name=_string(DEBUG)
+                    Compile Custom Option=_long(0)
+                    Exclude File From Build=_long(0)
+                [File Config [0] end]
+                File Name=_string(.\gui\WM\WM__GetFirstSibling.c,false,false,0,0)
+                File Config Number=_long(1)
+            [File_1_2 end]
+            [File_1_15 begin]
+                File Name=_string(.\gui\WM\WM_GetClientWindow.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_15 end]
+            [File_1_17 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_GetFirstChild.c,false,false,0,0)
+            [File_1_17 end]
+            [File_1_18 begin]
+                File Name=_string(.\gui\WM\WM_GetFocussedChild.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_18 end]
+            File Config Number=_long(1)
+            [File_1_8 begin]
+                File Name=_string(.\gui\WM\WM__SendMessageNoPara.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_8 end]
+            [File_1_11 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_Broadcast.c,false,false,0,0)
+            [File_1_11 end]
+            [File_1_14 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_GetClientRect.c,false,false,0,0)
+            [File_1_14 end]
+            [File_1_25 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_GetWindowRect.c,false,false,0,0)
+            [File_1_25 end]
+            [File_1_28 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_Hide.c,false,false,0,0)
+            [File_1_28 end]
+            [File_1_40 begin]
+                File Name=_string(.\gui\WM\WM_SetCreateFlags.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_40 end]
+            [File_1_43 begin]
+                File Name=_string(.\gui\WM\WM_SetFocusOnNextChild.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_43 end]
+            File Number=_long(52)
+            [File_1_5 begin]
+                File Name=_string(.\gui\WM\WM__GetPrevSibling.c,false,false,0,0)
+                File Config Number=_long(1)
+                [File Config [0] begin]
+                    Compile Custom Option=_long(0)
+                    File Config Name=_string(DEBUG)
+                    Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                    Assemble Custom Option=_long(0)
+                    Exclude File From Build=_long(0)
+                    Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                [File Config [0] end]
+            [File_1_5 end]
+            [File_1_22 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_GetOrg.c,false,false,0,0)
+            [File_1_22 end]
+            [File_1_31 begin]
+                File Name=_string(.\gui\WM\WM_Move.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_31 end]
+            [File_1_36 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_Screen2Win.c,false,false,0,0)
+            [File_1_36 end]
+            [File_1_39 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_SetCapture.c,false,false,0,0)
+            [File_1_39 end]
+            [File_1_46 begin]
+                File Name=_string(.\gui\WM\WM_SetTrans.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_46 end]
+            [File_1_49 begin]
+                File Name=_string(.\gui\WM\WM_ValidateWindow.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_49 end]
+            [File_1_0 begin]
+                File Name=_string(.\gui\WM\wm.c,false,false,0,0)
+                File Config Number=_long(1)
+                [File Config [0] begin]
+                    Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                    File Config Name=_string(DEBUG)
+                    Compile Custom Option=_long(0)
+                    Exclude File From Build=_long(0)
+                    Assemble Custom Option=_long(0)
+                    Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                [File Config [0] end]
+            [File_1_0 end]
+            [File_1_3 begin]
+                File Name=_string(.\gui\WM\WM__GetHasFocus.c,false,false,0,0)
+                File Config Number=_long(1)
+                [File Config [0] begin]
+                    File Config Name=_string(DEBUG)
+                    Compile Custom Option=_long(0)
+                    Assemble Custom Option=_long(0)
+                    Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                    Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                    Exclude File From Build=_long(0)
+                [File Config [0] end]
+            [File_1_3 end]
+            [File_1_30 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_IsWindow.c,false,false,0,0)
+            [File_1_30 end]
+            [File_1_33 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_OnKey.c,false,false,0,0)
+            [File_1_33 end]
+            [File_1_34 begin]
+                File Name=_string(.\gui\WM\WM_Paint.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_34 end]
+            [File_1_37 begin]
+                File Name=_string(.\gui\WM\WM_SendToParent.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_37 end]
+            [File_1_44 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_SetScrollState.c,false,false,0,0)
+            [File_1_44 end]
+            [File_1_47 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\WM\WM_SetUserClipRect.c,false,false,0,0)
+            [File_1_47 end]
+            [File Config [0] begin]
+                Compile Custom Option=_long(0)
+                Assemble Custom Option=_long(0)
+                Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+                Exclude File From Build=_long(0)
+                Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                File Config Name=_string(DEBUG)
+            [File Config [0] end]
+        [Dir_0_4 end]
+        [Dir_0_5 begin]
+            File Config Number=_long(0)
+            [File_1_2 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP233.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_2 end]
+            [File_1_5 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP444.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_5 end]
+            [File_1_8 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP8666.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_8 end]
+            Dir Name=_string(GUI-ConvertColor)
+            Dir Number=_long(0)
+            File Number=_long(14)
+            [File_1_0 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP111.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_0 end]
+            [File_1_3 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP323.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_3 end]
+            [File_1_6 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP555.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_6 end]
+            [File_1_11 begin]
+                File Name=_string(.\gui\ConvertColor\LCDPM332.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_11 end]
+            [File_1_9 begin]
+                File Name=_string(.\gui\ConvertColor\LCDPM233.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_9 end]
+            [File_1_10 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\ConvertColor\LCDPM323.c,false,false,0,0)
+            [File_1_10 end]
+            [File_1_13 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\ConvertColor\LCDPM565.c,false,false,0,0)
+            [File_1_13 end]
+            [File_1_1 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP222.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_1 end]
+            [File_1_4 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP332.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_4 end]
+            [File_1_7 begin]
+                File Name=_string(.\gui\ConvertColor\LCDP565.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_7 end]
+            [File_1_12 begin]
+                File Name=_string(.\gui\ConvertColor\LCDPM555.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_12 end]
+        [Dir_0_5 end]
+        [Dir_0_7 begin]
+            [File_1_42 begin]
+                File Name=_string(.\gui\core\GUI_OnKey.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_42 end]
+            [File_1_45 begin]
+                File Name=_string(.\gui\core\GUI_Protected.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_45 end]
+            [File_1_48 begin]
+                File Name=_string(.\gui\core\GUI_SelLCD.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_48 end]
+            [File_1_21 begin]
+                File Name=_string(.\gui\core\GUI_DrawPolyline.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_21 end]
+            [File_1_24 begin]
+                File Name=_string(.\gui\core\GUI_ErrorOut.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_24 end]
+            [File_1_27 begin]
+                File Name=_string(.\gui\core\GUI_FillRect.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_27 end]
+            [File_1_61 begin]
+                File Name=_string(.\gui\core\GUIAlloc.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_61 end]
+            [File_1_64 begin]
+                File Name=_string(.\gui\core\GUIChar0.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_64 end]
+            [File_1_94 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCD_Protected.h,false,false,0,0)
+            [File_1_94 end]
+            [File_1_97 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDGetP.c,false,false,0,0)
+            [File_1_97 end]
+            [File_1_67 begin]
+                File Name=_string(.\gui\core\GUICirc.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_67 end]
+            [File_1_91 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCD_GetPixelColor.c,false,false,0,0)
+            [File_1_91 end]
+            [File_1_54 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_SetPhysColor.c,false,false,0,0)
+            [File_1_54 end]
+            [File_1_57 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_WaitKey.c,false,false,0,0)
+            [File_1_57 end]
+            [File_1_0 begin]
+                File Name=_string(.\gui\core\GUI.H,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_0 end]
+            [File_1_40 begin]
+                File Name=_string(.\gui\core\GUI_MouseNoDrop.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_40 end]
+            [File_1_43 begin]
+                File Name=_string(.\gui\core\GUI_Pen.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_43 end]
+            [File_1_46 begin]
+                File Name=_string(.\gui\core\GUI_RectsIntersect.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_46 end]
+            [File_1_51 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_SetDefault.c,false,false,0,0)
+            [File_1_51 end]
+            [File_1_79 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUITime.c,false,false,0,0)
+            [File_1_79 end]
+            [File_1_80 begin]
+                File Name=_string(.\gui\core\guitimer.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_80 end]
+            [File_1_83 begin]
+                File Name=_string(.\gui\core\GUIUC1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_83 end]
+            [File_1_3 begin]
+                File Name=_string(.\gui\core\GUI__IntersectRect.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_3 end]
+            [File_1_6 begin]
+                File Name=_string(.\gui\core\GUI_AddBin.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_6 end]
+            [File_1_9 begin]
+                File Name=_string(.\gui\core\GUI_Color2VisColor.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_9 end]
+            [File_1_17 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_DrawGraph.c,false,false,0,0)
+            [File_1_17 end]
+            [File_1_31 begin]
+                File Name=_string(.\gui\core\GUI_GetFontInfo.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_31 end]
+            [File_1_34 begin]
+                File Name=_string(.\gui\core\GUI_InitLUT.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_34 end]
+            [File_1_49 begin]
+                File Name=_string(.\gui\core\GUI_SetColorIndex.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_49 end]
+            [File_1_73 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUIIndex2Color.c,false,false,0,0)
+            [File_1_73 end]
+            [File_1_76 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUIPolyR.c,false,false,0,0)
+            [File_1_76 end]
+            [File_1_86 begin]
+                File Name=_string(.\gui\core\LCD.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_86 end]
+            [File_1_89 begin]
+                File Name=_string(.\gui\core\LCD_GetColorIndex.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_89 end]
+            [File_1_11 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_DispHex.c,false,false,0,0)
+            [File_1_11 end]
+            [File_1_14 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_DrawBitmapExp.c,false,false,0,0)
+            [File_1_14 end]
+            [File_1_37 begin]
+                File Name=_string(.\gui\core\GUI_MergeRect.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_37 end]
+            [File_1_70 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUICurs.c,false,false,0,0)
+            [File_1_70 end]
+            [File_1_98 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDInfo.c,false,false,0,0)
+            [File_1_98 end]
+            [File_1_100 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDInfo1.c,false,false,0,0)
+            [File_1_100 end]
+            [File_1_103 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDRLE8.c,false,false,0,0)
+            [File_1_103 end]
+            [File_1_22 begin]
+                File Name=_string(.\gui\core\GUI_DrawRectEx.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_22 end]
+            [File_1_25 begin]
+                File Name=_string(.\gui\core\GUI_Exec.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_25 end]
+            [File_1_28 begin]
+                File Name=_string(.\gui\core\GUI_FillRectEx.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_28 end]
+            [File_1_36 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_Log.c,false,false,0,0)
+            [File_1_36 end]
+            [File_1_39 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_MouseArrow.c,false,false,0,0)
+            [File_1_39 end]
+            [File_1_62 begin]
+                File Name=_string(.\gui\core\guiarc.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_62 end]
+            [File_1_65 begin]
+                File Name=_string(.\gui\core\GUICharM.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_65 end]
+            [File_1_92 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCD_L0_Generic.c,false,false,0,0)
+            [File_1_92 end]
+            [File_1_95 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDAA.c,false,false,0,0)
+            [File_1_95 end]
+            [File_1_102 begin]
+                File Name=_string(.\gui\core\LCDRLE4.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_102 end]
+            [File_1_10 begin]
+                File Name=_string(.\gui\core\GUI_DispBin.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_10 end]
+            [File_1_13 begin]
+                File Name=_string(.\gui\core\GUI_DrawBitmap.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_13 end]
+            [File_1_16 begin]
+                File Name=_string(.\gui\core\GUI_DrawFocusRect.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_16 end]
+            [File_1_30 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_GetColor.c,false,false,0,0)
+            [File_1_30 end]
+            [File_1_33 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_GetVersionString.c,false,false,0,0)
+            [File_1_33 end]
+            [File_1_50 begin]
+                File Name=_string(.\gui\core\GUI_SetDecChar.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_50 end]
+            [File_1_53 begin]
+                File Name=_string(.\gui\core\GUI_SetOrg.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_53 end]
+            [File_1_68 begin]
+                File Name=_string(.\gui\core\GUIColor2Index.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_68 end]
+            [File_1_90 begin]
+                File Name=_string(.\gui\core\LCD_GetNumDisplays.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_90 end]
+            [File_1_5 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI__ReduceRect.c,false,false,0,0)
+            [File_1_5 end]
+            [File_1_8 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_AddHex.c,false,false,0,0)
+            [File_1_8 end]
+            [File_1_19 begin]
+                File Name=_string(.\gui\core\GUI_DrawPie.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_19 end]
+            [File_1_41 begin]
+                File Name=_string(.\gui\core\GUI_MoveRect.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_41 end]
+            [File_1_52 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_SetLUTEntry.c,false,false,0,0)
+            [File_1_52 end]
+            [File_1_55 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_StreamBMP.c,false,false,0,0)
+            [File_1_55 end]
+            [File_1_56 begin]
+                File Name=_string(.\gui\core\GUI_TOUCH.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_56 end]
+            [File_1_58 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_Warn.c,false,false,0,0)
+            [File_1_58 end]
+            [File_1_59 begin]
+                File Name=_string(.\gui\core\GUI_X.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_59 end]
+            [File_1_69 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUICore.c,false,false,0,0)
+            [File_1_69 end]
+            [File_1_93 begin]
+                File Name=_string(.\gui\core\LCD_Private.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_93 end]
+            Dir Name=_string(GUI-ConvertCore)
+            Dir Number=_long(0)
+            File Config Number=_long(0)
+            [File_1_1 begin]
+                File Name=_string(.\gui\core\GUI__AddSpaceHex.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_1 end]
+            [File_1_2 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI__DivideRound.c,false,false,0,0)
+            [File_1_2 end]
+            [File_1_4 begin]
+                File Name=_string(.\gui\core\GUI__IntersectRects.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_4 end]
+            [File_1_44 begin]
+                File Name=_string(.\gui\core\GUI_Private.h,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_44 end]
+            [File_1_47 begin]
+                File Name=_string(.\gui\core\GUI_SaveContext.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_47 end]
+            [File_1_63 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUIChar.c,false,false,0,0)
+            [File_1_63 end]
+            [File_1_66 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUICharP.c,false,false,0,0)
+            [File_1_66 end]
+            [File_1_77 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUIStream.c,false,false,0,0)
+            [File_1_77 end]
+            [File_1_81 begin]
+                File Name=_string(.\gui\core\GUITYPE.H,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_81 end]
+            [File_1_84 begin]
+                File Name=_string(.\gui\core\GUIVal.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_84 end]
+            [File_1_87 begin]
+                File Name=_string(.\gui\core\LCD.H,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_87 end]
+            File Number=_long(105)
+            [File_1_7 begin]
+                File Name=_string(.\gui\core\GUI_AddDec.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_7 end]
+            [File_1_15 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_DrawBitmapMag.c,false,false,0,0)
+            [File_1_15 end]
+            [File_1_18 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_DrawHLine.c,false,false,0,0)
+            [File_1_18 end]
+            [File_1_29 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_GetClientRect.c,false,false,0,0)
+            [File_1_29 end]
+            [File_1_32 begin]
+                File Name=_string(.\gui\core\GUI_GetTextExtend.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_32 end]
+            [File_1_35 begin]
+                File Name=_string(.\gui\core\GUI_InvertRect.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_35 end]
+            [File_1_71 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\guidebug.h,false,false,0,0)
+            [File_1_71 end]
+            [File_1_72 begin]
+                File Name=_string(.\gui\core\GUIEncJS.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_72 end]
+            [File_1_74 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUIPolyE.c,false,false,0,0)
+            [File_1_74 end]
+            [File_1_75 begin]
+                File Name=_string(.\gui\core\GUIPolyM.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_75 end]
+            [File_1_88 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCD_ConfDefaults.h,false,false,0,0)
+            [File_1_88 end]
+            [File_1_104 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDSIM.H,false,false,0,0)
+            [File_1_104 end]
+            [File_1_12 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_DispStringInRect.c,false,false,0,0)
+            [File_1_12 end]
+            [File_1_20 begin]
+                File Name=_string(.\gui\core\GUI_DrawPixel.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_20 end]
+            [File_1_23 begin]
+                File Name=_string(.\gui\core\GUI_DrawVLine.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_23 end]
+            [File_1_26 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUI_FillPolygon.c,false,false,0,0)
+            [File_1_26 end]
+            [File_1_38 begin]
+                File Name=_string(.\gui\core\GUI_MOUSE.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_38 end]
+            [File_1_60 begin]
+                File Name=_string(.\gui\core\gui2dlib.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_60 end]
+            [File_1_78 begin]
+                File Name=_string(.\gui\core\guitask.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_78 end]
+            [File_1_82 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUIUC0.c,false,false,0,0)
+            [File_1_82 end]
+            [File_1_85 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\GUIValf.c,false,false,0,0)
+            [File_1_85 end]
+            [File_1_96 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDColor.c,false,false,0,0)
+            [File_1_96 end]
+            [File_1_99 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDInfo0.c,false,false,0,0)
+            [File_1_99 end]
+            [File_1_101 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\core\LCDL0Mag.c,false,false,0,0)
+            [File_1_101 end]
+        [Dir_0_7 end]
+        [Dir_0_8 begin]
+            [File_1_41 begin]
+                File Name=_string(.\gui\Font\FComic18B_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_41 end]
+            [File_1_44 begin]
+                File Name=_string(.\gui\Font\FD24x32.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_44 end]
+            File Config Number=_long(1)
+            [File_1_26 begin]
+                File Name=_string(.\gui\Font\F32B_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_26 end]
+            [File_1_20 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F24_1.c,false,false,0,0)
+            [File_1_20 end]
+            [File_1_23 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F24B_ASCII.c,false,false,0,0)
+            [File_1_23 end]
+            [File_1_29 begin]
+                File Name=_string(.\gui\Font\F6x8.C,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_29 end]
+            [File_1_42 begin]
+                File Name=_string(.\gui\Font\FComic24B_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_42 end]
+            [File_1_45 begin]
+                File Name=_string(.\gui\Font\FD32.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_45 end]
+            [File_1_6 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F13_1.c,false,false,0,0)
+            [File_1_6 end]
+            [File_1_9 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F13B_ASCII.c,false,false,0,0)
+            [File_1_9 end]
+            Dir Name=_string(GUI-Font)
+            Dir Number=_long(0)
+            [File_1_24 begin]
+                File Name=_string(.\gui\Font\F32_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_24 end]
+            [File_1_27 begin]
+                File Name=_string(.\gui\Font\F32B_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_27 end]
+            [File_1_38 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F8x16.c,false,false,0,0)
+            [File_1_38 end]
+            File Number=_long(46)
+            [File_1_12 begin]
+                File Name=_string(.\gui\Font\F13HB_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_12 end]
+            [File_1_15 begin]
+                File Name=_string(.\gui\Font\F16_1HK.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_15 end]
+            [File_1_21 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F24_ASCII.c,false,false,0,0)
+            [File_1_21 end]
+            [File_1_32 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F8x13.c,false,false,0,0)
+            [File_1_32 end]
+            [File_1_35 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F8x15B.c,false,false,0,0)
+            [File_1_35 end]
+            [File_1_2 begin]
+                File Name=_string(.\gui\Font\F10_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_2 end]
+            [File_1_5 begin]
+                File Name=_string(.\gui\Font\F10S_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_5 end]
+            [File_1_8 begin]
+                File Name=_string(.\gui\Font\F13B_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_8 end]
+            [File_1_18 begin]
+                File Name=_string(.\gui\Font\F16B_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_18 end]
+            [File_1_40 begin]
+                File Name=_string(.\gui\Font\FComic18B_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_40 end]
+            [File_1_43 begin]
+                File Name=_string(.\gui\Font\FComic24B_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_43 end]
+            [File_1_4 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F10S_1.c,false,false,0,0)
+            [File_1_4 end]
+            [File_1_7 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F13_ASCII.c,false,false,0,0)
+            [File_1_7 end]
+            [File_1_31 begin]
+                File Name=_string(.\gui\Font\F8x12_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_31 end]
+            [File_1_34 begin]
+                File Name=_string(.\gui\Font\F8x13_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_34 end]
+            [File_1_37 begin]
+                File Name=_string(.\gui\Font\F8x15B_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_37 end]
+            [File_1_1 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F08_ASCII.c,false,false,0,0)
+            [File_1_1 end]
+            [File_1_11 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F13H_ASCII.c,false,false,0,0)
+            [File_1_11 end]
+            [File_1_14 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F16_1.c,false,false,0,0)
+            [File_1_14 end]
+            [File_1_17 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F16_HK.c,false,false,0,0)
+            [File_1_17 end]
+            [File_1_10 begin]
+                File Name=_string(.\gui\Font\F13H_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_10 end]
+            [File_1_22 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F24B_1.c,false,false,0,0)
+            [File_1_22 end]
+            [File_1_25 begin]
+                File Name=_string(.\gui\Font\F32_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_25 end]
+            [File_1_28 begin]
+                File Name=_string(.\gui\Font\F4x6.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_28 end]
+            [File_1_36 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F8x15B_1.c,false,false,0,0)
+            [File_1_36 end]
+            [File_1_39 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F8x8.c,false,false,0,0)
+            [File_1_39 end]
+            [File_1_0 begin]
+                File Name=_string(.\gui\Font\F08_1.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_0 end]
+            [File_1_3 begin]
+                File Name=_string(.\gui\Font\F10_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_3 end]
+            [File_1_13 begin]
+                File Name=_string(.\gui\Font\F13HB_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_13 end]
+            [File_1_16 begin]
+                File Name=_string(.\gui\Font\F16_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_16 end]
+            [File_1_19 begin]
+                File Name=_string(.\gui\Font\F16B_ASCII.c,false,false,0,0)
+                File Config Number=_long(0)
+            [File_1_19 end]
+            [File_1_30 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F8x10_ASCII.c,false,false,0,0)
+            [File_1_30 end]
+            [File_1_33 begin]
+                File Config Number=_long(0)
+                File Name=_string(.\gui\Font\F8x13_1.c,false,false,0,0)
+            [File_1_33 end]
+            [File Config [0] begin]
+                Exclude File From Build=_long(0)
+                Assemble Custom Option=_long(0)
+                Compile Custom Command=_string(-gdwarf-2 -c -I.\gui\core\ -I.\config -I.\gui\wm\ -I..\UCOS-II -I..\include\ $(SrcFile) -o.\debug\$(ObjFile))
+                File Config Name=_string(DEBUG)
+                Compile Custom Option=_long(0)
+                Assemble Custom Command=_string(-gdwarf2 $(SrcFile) -o.\debug\$(ObjFile))
+            [File Config [0] end]
+        [Dir_0_8 end]
+        Dir Number=_long(10)
+    [File end]
+[APJ end]

@@ -1,0 +1,16 @@
+# ADT Workspace File, Format Version 1.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+[AWS begin]
+    [WorkSpace begin]
+        Name=_string(App3)
+        FileType=_string(WorkSpace)
+        Version=_string(v1.0)
+        Opt File Name=_string(.\App4.opt)
+    [WorkSpace end]
+    [Project List begin]
+        Project0=_string(.\App4.apj)
+        Project Numbers=_long(1)
+        Active Project=_string(App4)
+    [Project List end]
+[AWS end]

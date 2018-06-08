@@ -1,0 +1,44 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY case8_3 IS
+	PORT(
+		input: IN STD_LOGIC_VECTOR(7 downto 0);
+		code:	OUT STD_LOGIC_VECTOR(2 downto 0)
+		);
+END case8_3;
+
+ARCHITECTURE example OF case8_3 IS
+BEGIN
+	PROCESS(input)
+	BEGIN
+		case case8_3 is
+			when "11111110" => code <= "111";
+			when "11111101" => code <= "110";
+			when "11111011" => code <= "101";
+			when "11110111" => code <= "100";
+			when "11101111" => code <= "011";
+			when "11011111" => code <= "010";
+			when "10111111" => code <= "001";
+			when "01111111" => code <= "000";
+			when others => code <= "000";
+		
+		if input(0) = '0' then		
+			
+		elsif input(1) = '0' then		
+			code <= "110";
+		elsif input(2) = '0' then		
+			code <= "101";
+		elsif input(3) = '0' then	
+			code <= "100";
+		elsif input(4) = '0' then	
+			code <= "011";	
+		elsif input(5) = '0' then	
+			code <= "010";
+		elsif input(6) = '0' then	
+			code <= "001";	
+		else
+			code <= "000";
+		end if;
+	END PROCESS;
+END example;

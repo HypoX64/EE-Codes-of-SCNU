@@ -1,0 +1,39 @@
+# ADT Workspace File, Format Version 1.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+[AWS begin]
+    [WorkSpace begin]
+        Name=_string(examples)
+        FileType=_string(WorkSpace)
+        Version=_string(v1.0)
+        Opt File Name=_string(.\examples.opt)
+    [WorkSpace end]
+    [Project List begin]
+        Project1=_string(.\lang\asse1.apj)
+        Project13=_string(.\stepper\stepper.apj)
+        Project0=_string(.\leddemo\leddemo.apj)
+        Project12=_string(.\ad\ad.apj)
+        Project23=_string(.\parallel\parallel.apj)
+        Project11=_string(.\da\da.apj)
+        Project22=_string(.\ide\ide.apj)
+        Project10=_string(.\iic\iic.apj)
+        Project21=_string(.\cf\cf.apj)
+        Project20=_string(.\PS2\PS2.apj)
+        Project9=_string(.\rs485\rs485.apj)
+        Project8=_string(.\watchdog\watchdog.apj)
+        Project7=_string(.\rtc\rtc.apj)
+        Project19=_string(.\can\can.apj)
+        Project6=_string(.\pwm\pwm.apj)
+        Project18=_string(.\tftp\tftp.apj)
+        Project5=_string(.\dma\dma.apj)
+        Project17=_string(.\iis\iis.apj)
+        Project Numbers=_long(24)
+        Project4=_string(.\interrupt\interrupt.apj)
+        Project16=_string(.\touch\touch.apj)
+        Project3=_string(.\uart\uart.apj)
+        Project15=_string(.\lcd\lcd.apj)
+        Project2=_string(.\lang\asse2.apj)
+        Project14=_string(.\keyboard\keyboard.apj)
+        Active Project=_string(leddemo)
+    [Project List end]
+[AWS end]
