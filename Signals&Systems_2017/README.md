@@ -3,3 +3,4 @@
 # 软件要求
 * matlab
 * Proteus 8
+* Filter Solutions 2015
