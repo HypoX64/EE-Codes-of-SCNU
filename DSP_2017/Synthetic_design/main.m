@@ -1,46 +1,46 @@
- function  homework(fs, N) %fs=1000;N=200       homework(1000,400) 
+ function main(fs, N) %fs=1000;N=200       homework(1000,400) 
  
 n=0:N-1;
 t=n/fs;
 figure(1);
-base1=0.5*square(2*pi*10*t)+0.3;subplot(3,4,1);plot(t,base1);title('»ù²¨1(10HZ·½²¨)')
-carrier1=sin(2*pi*100*t);subplot(3,4,2);plot(t,carrier1);title('ÔØ²¨1(100HZÕıÏÒ²¨)')
-mix1=base1.*carrier1;subplot(3,4,3);plot(t,mix1);title('»ù²¨1µ÷ÖÆ½á¹û')
+base1=0.5*square(2*pi*10*t)+0.3;subplot(3,4,1);plot(t,base1);title('åŸºæ³¢1(10HZæ–¹æ³¢)')
+carrier1=sin(2*pi*100*t);subplot(3,4,2);plot(t,carrier1);title('è½½æ³¢1(100HZæ­£å¼¦æ³¢)')
+mix1=base1.*carrier1;subplot(3,4,3);plot(t,mix1);title('åŸºæ³¢1è°ƒåˆ¶ç»“æœ')
 
-%base2=sawtooth(2*pi*10*t,0.5)+1;subplot(3,4,5);plot(t,base2);title('»ù²¨10HZÈı½Ç²¨')
-base2=0.5*square(2*pi*10*t)+0.3;subplot(3,4,5);plot(t,base2);title('»ù²¨2£¨10HZ·½²¨£©')
-carrier2=sin(2*pi*300*t);subplot(3,4,6);plot(t,carrier2);title('ÔØ²¨2£¨300HZÕıÏÒ²¨£©')
-mix2=base2.*carrier2;subplot(3,4,7);plot(t,mix2);title('»ù²¨2µ÷ÖÆ½á¹û')
+%base2=sawtooth(2*pi*10*t,0.5)+1;subplot(3,4,5);plot(t,base2);title('åŸºæ³¢10HZä¸‰è§’æ³¢')
+base2=0.5*square(2*pi*10*t)+0.3;subplot(3,4,5);plot(t,base2);title('åŸºæ³¢2ï¼ˆ10HZæ–¹æ³¢ï¼‰')
+carrier2=sin(2*pi*300*t);subplot(3,4,6);plot(t,carrier2);title('è½½æ³¢2ï¼ˆ300HZæ­£å¼¦æ³¢ï¼‰')
+mix2=base2.*carrier2;subplot(3,4,7);plot(t,mix2);title('åŸºæ³¢2è°ƒåˆ¶ç»“æœ')
 
-mix3=mix1+mix2;subplot(3,4,8);plot(t,mix3);title('µ÷ÖÆĞÅºÅµş¼Ó½á¹û')
+mix3=mix1+mix2;subplot(3,4,8);plot(t,mix3);title('è°ƒåˆ¶ä¿¡å·å åŠ ç»“æœ')
 
-bandpass1=filter(filter_IIR_Butter(fs,4,50,150),mix3);subplot(3,4,9);plot(t,bandpass1);title('50~150HZ´øÍ¨ÂË²¨');%IIR·½Ê½´øÍ¨ÂË²¨
-%bandpass1=filter(filter_FIR_ButterBPF(fs,10,50,150,200),mix3);subplot(3,4,9);plot(t,bandpass1);title('50~150HZ´øÍ¨ÂË²¨');%FIR·½Ê½´øÍ¨ÂË²¨
-demod1=bandpass1.*carrier1;%Ïà¸É½âµ÷
-final1=filter(filter_butterLPF(fs,12,100),demod1);subplot(3,4,10);plot(t,final1);title('100HZµÍÍ¨&½âµ÷ĞÅºÅ1¡°×îÖÕ½á¹û¡±');
+bandpass1=filter(filter_IIR_Butter(fs,4,50,150),mix3);subplot(3,4,9);plot(t,bandpass1);title('50~150HZå¸¦é€šæ»¤æ³¢');%IIRæ–¹å¼å¸¦é€šæ»¤æ³¢
+%bandpass1=filter(filter_FIR_ButterBPF(fs,10,50,150,200),mix3);subplot(3,4,9);plot(t,bandpass1);title('50~150HZå¸¦é€šæ»¤æ³¢');%FIRæ–¹å¼å¸¦é€šæ»¤æ³¢
+demod1=bandpass1.*carrier1;%ç›¸å¹²è§£è°ƒ
+final1=filter(filter_butterLPF(fs,12,100),demod1);subplot(3,4,10);plot(t,final1);title('100HZä½é€š&è§£è°ƒä¿¡å·1â€œæœ€ç»ˆç»“æœâ€');
 
-bandpass2=filter(filter_IIR_Butter(fs,4,250,350),mix3);subplot(3,4,11);plot(t,bandpass2);title('250~350HZ´øÍ¨ÂË²¨');%IIR·½Ê½´øÍ¨ÂË²¨
-%bandpass2=filter(filter_FIR_ButterBPF(fs,150,220,380,450),mix3);subplot(3,4,11);plot(t,bandpass2);title('220~380HZ´øÍ¨ÂË²¨');%FIR·½Ê½´øÍ¨ÂË²¨
-demod2=bandpass2.*carrier2;%Ïà¸É½âµ÷
-final2=filter(filter_butterLPF(fs,12,100),demod2);subplot(3,4,12);plot(t,final2);title('100HZµÍÍ¨&½âµ÷ĞÅºÅ2¡°×îÖÕ½á¹û¡±');
+bandpass2=filter(filter_IIR_Butter(fs,4,250,350),mix3);subplot(3,4,11);plot(t,bandpass2);title('250~350HZå¸¦é€šæ»¤æ³¢');%IIRæ–¹å¼å¸¦é€šæ»¤æ³¢
+%bandpass2=filter(filter_FIR_ButterBPF(fs,150,220,380,450),mix3);subplot(3,4,11);plot(t,bandpass2);title('220~380HZå¸¦é€šæ»¤æ³¢');%FIRæ–¹å¼å¸¦é€šæ»¤æ³¢
+demod2=bandpass2.*carrier2;%ç›¸å¹²è§£è°ƒ
+final2=filter(filter_butterLPF(fs,12,100),demod2);subplot(3,4,12);plot(t,final2);title('100HZä½é€š&è§£è°ƒä¿¡å·2â€œæœ€ç»ˆç»“æœâ€');
 
 figure(2);
-[k,xk]=fft_Hypo(fs,N,base1);subplot(2,2,1);stem(k,xk);title('»ù²¨1ÆµÆ×Í¼(10HZ·½²¨)');
-[k,xk]=fft_Hypo(fs,N,final1);subplot(2,2,2);stem(k,xk);title('½âµ÷ĞÅºÅ1ÆµÆ×Í¼(10HZ·½²¨)');
-[k,xk]=fft_Hypo(fs,N,base2);subplot(2,2,3);stem(k,xk);title('»ù²¨2ÆµÆ×Í¼(10HZ·½²¨)');
-[k,xk]=fft_Hypo(fs,N,final2);subplot(2,2,4);stem(k,xk);title('»ù²¨2ÆµÆ×Í¼(10HZ·½²¨)');
+[k,xk]=fft_Hypo(fs,N,base1);subplot(2,2,1);stem(k,xk);title('åŸºæ³¢1é¢‘è°±å›¾(10HZæ–¹æ³¢)');
+[k,xk]=fft_Hypo(fs,N,final1);subplot(2,2,2);stem(k,xk);title('è§£è°ƒä¿¡å·1é¢‘è°±å›¾(10HZæ–¹æ³¢)');
+[k,xk]=fft_Hypo(fs,N,base2);subplot(2,2,3);stem(k,xk);title('åŸºæ³¢2é¢‘è°±å›¾(10HZæ–¹æ³¢)');
+[k,xk]=fft_Hypo(fs,N,final2);subplot(2,2,4);stem(k,xk);title('åŸºæ³¢2é¢‘è°±å›¾(10HZæ–¹æ³¢)');
 figure(3);
-[k,xk]=fft_Hypo(fs,N,mix1);subplot(2,3,1);stem(k,xk);title('»ù²¨1µ÷ÖÆ½á¹ûÆµÆ×Í¼');
-[k,xk]=fft_Hypo(fs,N,mix2);subplot(2,3,2);stem(k,xk);title('»ù²¨2µ÷ÖÆ½á¹ûÆµÆ×Í¼');
-[k,xk]=fft_Hypo(fs,N,mix3);subplot(2,3,3);stem(k,xk);title('µş¼Ó½á¹ûÆµÆ×Í¼');
-[k,xk]=fft_Hypo(fs,N,bandpass1);subplot(2,3,4);stem(k,xk);title('50~150HZ´øÍ¨ÂË²¨ÆµÆ×Í¼');
-[k,xk]=fft_Hypo(fs,N,bandpass2);subplot(2,3,5);stem(k,xk);title('220~380HZ´øÍ¨ÂË²¨ÆµÆ×Í¼');
-[k,xk]=fft_Hypo(fs,N,base1);subplot(2,3,6);stem(k,xk);title('²âÊÔ');
+[k,xk]=fft_Hypo(fs,N,mix1);subplot(2,3,1);stem(k,xk);title('åŸºæ³¢1è°ƒåˆ¶ç»“æœé¢‘è°±å›¾');
+[k,xk]=fft_Hypo(fs,N,mix2);subplot(2,3,2);stem(k,xk);title('åŸºæ³¢2è°ƒåˆ¶ç»“æœé¢‘è°±å›¾');
+[k,xk]=fft_Hypo(fs,N,mix3);subplot(2,3,3);stem(k,xk);title('å åŠ ç»“æœé¢‘è°±å›¾');
+[k,xk]=fft_Hypo(fs,N,bandpass1);subplot(2,3,4);stem(k,xk);title('50~150HZå¸¦é€šæ»¤æ³¢é¢‘è°±å›¾');
+[k,xk]=fft_Hypo(fs,N,bandpass2);subplot(2,3,5);stem(k,xk);title('220~380HZå¸¦é€šæ»¤æ³¢é¢‘è°±å›¾');
+[k,xk]=fft_Hypo(fs,N,base1);subplot(2,3,6);stem(k,xk);title('æµ‹è¯•');
 figure(4);
-[k,xk]=fft_Hypo(fs,N,demod1);subplot(1,2,1);stem(k,xk);title('ĞÅºÅ1£¬Ïà¸É½âµ÷ºó£¬µÍÍ¨Ç°');
-[k,xk]=fft_Hypo(fs,N,demod2);subplot(1,2,2);stem(k,xk);title('ĞÅºÅ2£¬Ïà¸É½âµ÷ºó£¬µÍÍ¨Ç°');
+[k,xk]=fft_Hypo(fs,N,demod1);subplot(1,2,1);stem(k,xk);title('ä¿¡å·1ï¼Œç›¸å¹²è§£è°ƒåï¼Œä½é€šå‰');
+[k,xk]=fft_Hypo(fs,N,demod2);subplot(1,2,2);stem(k,xk);title('ä¿¡å·2ï¼Œç›¸å¹²è§£è°ƒåï¼Œä½é€šå‰');
 %figure(5);
-%[k,xk]=fft_Hypo(fs,N,carrier1);stem(k,xk);title('²âÊÔ');
+%[k,xk]=fft_Hypo(fs,N,carrier1);stem(k,xk);title('æµ‹è¯•');
 %fvtool(filter_FIR_ButterBPF(fs,50,80,120,150));
 %fvtool(filter_FIR_ButterBPF(fs,250,280,320,350));
 %fvtool(filter_butterLPF(fs,10,100));
