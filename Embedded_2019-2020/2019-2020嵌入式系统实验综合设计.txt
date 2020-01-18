@@ -1,0 +1,236 @@
+#include	"Includes.h"               /* uC/OS interface */
+#include    "option.h"
+#include    "2410lib.h"
+#include    "uhal.h"
+
+OS_STK StackLED[STACKSIZE]= {0, }; 
+OS_STK StackSEG[STACKSIZE]= {0, }; 
+
+char IdLED = '1'; 
+char IdSEG = '2'; 
+
+int seg=0;
+
+void TaskLED(void *Id); 
+void TaskSEG(void *Id); 
+
+OS_EVENT *Mbox1;
+
+void User_LED_Blink(void)
+{
+	static int led_status = 1;
+	
+	led_status += 1;
+	if(led_status % 2 == 0)
+		Led_Display(0x0f);
+	else
+		Led_Display(0x00);			
+}
+
+void User_SEG_Blink(void)
+{
+	static unsigned char seg_value[] = { 0xc0, 0xf9, 0xa4, 0xb0, 0x99, 0x92, 0x82, 0xf8, 0x80, 0x90, 0x88, 0x83, 0xc6, 0xa1, 0x86, 0x8e };		   
+	static int seg_status = 0;
+	
+	*((unsigned char *)0x10000006) = 0x3e;
+	*((unsigned char *)0x10000004) = seg_value[seg];
+	seg_status += 1;
+	if(seg_status > 15)
+		seg_status = 0;
+	
+}
+
+void TaskLED(void *Id)
+{
+    char	Msg[100];
+	INT8U	err;
+	int     nCount = 0;
+	int benable = STEP_MOTOR_ENABLE;
+	int direct = STEP_MOTOR_CLOCKWISE;
+	char led_status = 0x0;
+	
+
+    ARMTargetStart();
+
+    uHALr_printf("Task1() called\n");
+	uHALr_printf("步进电机测试!\n");
+	uHALr_printf("E -- 正反转 F -- 启停");
+	uHALr_printf("UP -- 加速  DOWN -- 减速");
+    
+    DRVStepperInit();
+
+	DRVStepperSetDirect(direct);
+	DRVStepperControl(benable);
+	
+	for (;;) {
+		
+		INT8U  ch;
+		
+		ch = Key_GetKey();
+		if(ch == 0)
+			continue;
+		switch( ch )
+		{
+		case '1':
+				uHALr_printf("\r1");
+				seg=1;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '2':
+				uHALr_printf("\r2\r");
+				seg=2;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '3':
+				uHALr_printf("\r3\r");
+				seg=3;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '4':
+				uHALr_printf("\r4\r");
+				seg=4;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '5':
+				uHALr_printf("\r5\r");
+				seg=5;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '6':
+				uHALr_printf("\r6\r");
+				seg=6;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '7':
+				uHALr_printf("\r7\r");
+				seg=7;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '8':
+				uHALr_printf("\r8\r");
+				seg=8;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '9':
+				uHALr_printf("\r9\r");
+				seg=9;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case '0':
+				uHALr_printf("\r0\n");
+				seg=0;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case 'A':
+				uHALr_printf("\rA\n");
+				User_LED_Blink();
+				seg=10;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+			break;
+			case 'C':  
+				uHALr_printf("\r加速");
+				DRVStepperSpeedUp();
+				seg=12;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+				break;
+			case 'D':  
+				uHALr_printf("\r减速");
+				DRVStepperSpeedDown();
+				seg=13;
+				sprintf(Msg, "TaskSEG %d", nCount++);
+				OSMboxPost(Mbox1, Msg);
+				break;
+			case 'E': 
+				if(direct == STEP_MOTOR_CLOCKWISE)
+				{
+					uHALr_printf("\r正转");
+					direct = STEP_MOTOR_ANTICLOCKWISE;
+					seg=14;
+					sprintf(Msg, "TaskSEG %d", nCount++);
+				    OSMboxPost(Mbox1, Msg);
+				}
+				else
+				{
+					uHALr_printf("\r反转");
+					direct = STEP_MOTOR_CLOCKWISE;
+					seg=14;
+					sprintf(Msg, "TaskSEG %d", nCount++);
+				    OSMboxPost(Mbox1, Msg);
+				}
+				DRVStepperSetDirect(direct);
+				break;
+			case 'F': 
+				if(benable == STEP_MOTOR_ENABLE)
+				{
+					uHALr_printf("\r停止ֹ");
+					benable = STEP_MOTOR_DISABLE;
+					seg=15;
+					sprintf(Msg, "TaskSEG %d", nCount++);
+				    OSMboxPost(Mbox1, Msg);
+				}
+				else
+				{
+					uHALr_printf("\r启动");
+					benable = STEP_MOTOR_ENABLE;
+					seg=15;
+					sprintf(Msg, "TaskSEG %d", nCount++);
+				    OSMboxPost(Mbox1, Msg);
+				}
+				DRVStepperControl(benable);
+				break;
+		
+		}
+			
+        OSTimeDly(10);       
+    }
+}
+
+void TaskSEG(void *Id)
+{
+char	*Msg;
+INT8U	err;
+for (;;) {
+		Msg = (char *)OSMboxPend(Mbox1, 0, &err);
+        uHALr_printf("Task2() called\n");
+          
+		OSSchedLock();
+
+		sprintf(print_buf, "Task%c() turned\n", *(char *)Id);
+        uHALr_printf(print_buf);
+        User_SEG_Blink();
+
+        OSSchedUnlock();
+
+        OSTimeDly(10);
+    
+    }
+}
+
+void Main(void)
+{
+
+	ARMTargetInit();
+    
+	OSInit();
+
+	Mbox1 = OSMboxCreate((void *)0); 
+	
+	OSTaskCreate(TaskLED, (void *)&IdLED, (OS_STK *)&StackLED[STACKSIZE - 1], 5);
+	OSTaskCreate(TaskSEG, (void *)&IdSEG, (OS_STK *)&StackSEG[STACKSIZE - 1], 13);
+
+    OSStart();
+
+	return;
+}   
